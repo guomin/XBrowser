@@ -1,0 +1,6 @@
+glob:*.suo
+glob:bin
+glob:*.csuser
+glob:obj
+glob:*.ReSharper
+glob:*.user
