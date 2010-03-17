@@ -4,3 +4,5 @@ glob:*.csuser
 glob:obj
 glob:*.ReSharper
 glob:*.user
+glob:*.tmp
+glob:Thumbs.db
