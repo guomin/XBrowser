@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AxeFrog", "..\axefrogcore\Core\AxeFrog.csproj", "{EFDB927C-67B6-4322-9346-F41078886376}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AxeFrog.Net.XBrowser", "XBrowser\AxeFrog.Net.XBrowser.csproj", "{F95787C8-FAEC-4364-907B-AE5D3DE2096F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AxeFrog.Net.Html", "AxeFrog.Net.Html\AxeFrog.Net.Html.csproj", "{FF2B0B80-DE6C-4E07-B6EF-CCA7542B842A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AxeFrog.Net.Tests", "AxeFrog.Net.Tests\AxeFrog.Net.Tests.csproj", "{F3739674-BCB2-485C-94F6-3E288EEDDFB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{08CA6574-D0B1-4516-B180-8C9C5164AFAB}"
+	ProjectSection(SolutionItems) = preProject
+		AxeFrog.Net.XBrowser.vsmdi = AxeFrog.Net.XBrowser.vsmdi
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = AxeFrog.Net.XBrowser.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFDB927C-67B6-4322-9346-F41078886376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFDB927C-67B6-4322-9346-F41078886376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFDB927C-67B6-4322-9346-F41078886376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFDB927C-67B6-4322-9346-F41078886376}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F95787C8-FAEC-4364-907B-AE5D3DE2096F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F95787C8-FAEC-4364-907B-AE5D3DE2096F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F95787C8-FAEC-4364-907B-AE5D3DE2096F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F95787C8-FAEC-4364-907B-AE5D3DE2096F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF2B0B80-DE6C-4E07-B6EF-CCA7542B842A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF2B0B80-DE6C-4E07-B6EF-CCA7542B842A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF2B0B80-DE6C-4E07-B6EF-CCA7542B842A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF2B0B80-DE6C-4E07-B6EF-CCA7542B842A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3739674-BCB2-485C-94F6-3E288EEDDFB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3739674-BCB2-485C-94F6-3E288EEDDFB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3739674-BCB2-485C-94F6-3E288EEDDFB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3739674-BCB2-485C-94F6-3E288EEDDFB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

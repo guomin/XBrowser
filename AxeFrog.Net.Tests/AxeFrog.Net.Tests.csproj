@@ -1,17 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F95787C8-FAEC-4364-907B-AE5D3DE2096F}</ProjectGuid>
+    <ProjectGuid>{F3739674-BCB2-485C-94F6-3E288EEDDFB4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AxeFrog.Net.XBrowser</RootNamespace>
-    <AssemblyName>AxeFrog.Net.XBrowser</AssemblyName>
+    <RootNamespace>AxeFrog.Net.Tests</RootNamespace>
+    <AssemblyName>AxeFrog.Net.Tests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,48 +31,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\axefrogcore\Core\AxeFrog.csproj">
-      <Project>{EFDB927C-67B6-4322-9346-F41078886376}</Project>
-      <Name>AxeFrog</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AxeFrog.Net.Html\AxeFrog.Net.Html.csproj">
-      <Project>{FF2B0B80-DE6C-4E07-B6EF-CCA7542B842A}</Project>
-      <Name>AxeFrog.Net.Html</Name>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XBrowser\CookieStoreTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AuthoringTests.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XBrowser\AxeFrog.Net.XBrowser.csproj">
+      <Project>{F95787C8-FAEC-4364-907B-AE5D3DE2096F}</Project>
+      <Name>AxeFrog.Net.XBrowser</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="CookieStore.cs" />
-    <Compile Include="HtmlResult.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="HttpBrowser.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="XBrowser.cs" />
-    <Compile Include="XHtmlElement.cs" />
-    <Compile Include="XHtmlHttpBrowser.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

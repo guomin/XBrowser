@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F95787C8-FAEC-4364-907B-AE5D3DE2096F}</ProjectGuid>
+    <ProjectGuid>{FF2B0B80-DE6C-4E07-B6EF-CCA7542B842A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AxeFrog.Net.XBrowser</RootNamespace>
-    <AssemblyName>AxeFrog.Net.XBrowser</AssemblyName>
+    <RootNamespace>AxeFrog.Net.Html</RootNamespace>
+    <AssemblyName>AxeFrog.Net.Html</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,13 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.3.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -48,29 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\axefrogcore\Core\AxeFrog.csproj">
-      <Project>{EFDB927C-67B6-4322-9346-F41078886376}</Project>
-      <Name>AxeFrog</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AxeFrog.Net.Html\AxeFrog.Net.Html.csproj">
-      <Project>{FF2B0B80-DE6C-4E07-B6EF-CCA7542B842A}</Project>
-      <Name>AxeFrog.Net.Html</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="CookieStore.cs" />
-    <Compile Include="HtmlResult.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="HttpBrowser.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="XBrowser.cs" />
-    <Compile Include="XHtmlElement.cs" />
-    <Compile Include="XHtmlHttpBrowser.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
+    <Compile Include="HtmlParser.cs" />
+    <Compile Include="HtmlParserException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

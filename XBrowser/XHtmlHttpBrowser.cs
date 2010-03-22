@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Xml;
 using System.Xml.Linq;
-using HtmlAgilityPack;
+using AxeFrog.Net.Html;
 
 namespace AxeFrog.Net.XBrowser
 {
@@ -18,7 +18,6 @@ namespace AxeFrog.Net.XBrowser
 		public XHtmlHttpBrowser()
 		{
 			_currentHtml = null;
-			HtmlNode.ElementsFlags.Remove("form");
 			if(ServicePointManager.Expect100Continue)
 				ServicePointManager.Expect100Continue = false;
 			ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
@@ -489,70 +488,21 @@ namespace AxeFrog.Net.XBrowser
 			{
 				if(_doc == null)
 				{
-					var xmlStr = SanitizeHtmlToXml(_currentHtml);
-					try { _doc = XDocument.Parse(xmlStr); }
-					catch(XmlException ex)
+					try
 					{
-						if(ex.Message.Contains("multiple root elements") || ex.Message.Contains("Root element is missing"))
-						{
-							xmlStr = "<?xml version=\"1.0\"?>\r\n<html>" + Regex.Replace(xmlStr, @"\<\?xml[^\>]*\?\>", "") + "\r\n</html>";
-							_doc = XDocument.Parse(xmlStr);
-						}
-						else
-						{
-							Log("Error converting HTML to XML for URL " + Url);
-							Log(ex.Message);
-							_doc = XDocument.Parse("<?xml version=\"1.0\"?>\r\n<html><body /></html>");
-						}
+						_doc = HtmlParser.Parse(_currentHtml);
+					}
+					catch(HtmlParserException ex)
+					{
+						Log("Error converting HTML to XML for URL " + Url);
+						Log(ex.Message);
+						_doc = HtmlParser.CreateBlankHtmlDocument();
 					}
 				}
 				return _doc;
 			}
 		}
 
-		private string SanitizeHtmlToXml(string html)
-		{
-			var hdoc = new HtmlDocument();
-			hdoc.LoadHtml(html ?? "");
-			using(StringWriter writer = new StringWriter())
-			{
-				using(XmlTextWriter xtw = new XmlTextWriter(writer))
-				{
-					xtw.Formatting = Formatting.Indented;
-					xtw.IndentChar = '\t';
-					xtw.Indentation = 1;
-					hdoc.DocumentNode.WriteTo(xtw);
-					xtw.Close();
-					return SanitizeXmlString(writer.ToString());
-				}
-			}
-		}
-
-		private string SanitizeXmlString(string xml)
-		{
-			if(xml == null)
-				throw new ArgumentNullException("xml");
-
-			StringBuilder buffer = new StringBuilder(xml.Length);
-			foreach(char c in xml)
-				if(IsLegalXmlChar(c))
-					buffer.Append(c);
-
-			return buffer.ToString();
-		}
-
-		private bool IsLegalXmlChar(int character)
-		{
-			return
-				(
-					character == 0x9 /* == '\t' == 9   */          ||
-					character == 0xA /* == '\n' == 10  */          ||
-					character == 0xD /* == '\r' == 13  */          ||
-					(character >= 0x20 && character <= 0xD7FF) ||
-					(character >= 0xE000 && character <= 0xFFFD) ||
-					(character >= 0x10000 && character <= 0x10FFFF)
-				);
-		}
 		private string _userAgent;
 		private HttpWebRequest PrepareRequestObject(Uri url, string method, int timeoutMilliseconds)
 		{

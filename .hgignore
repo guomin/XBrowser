@@ -6,3 +6,4 @@ glob:*.ReSharper
 glob:*.user
 glob:*.tmp
 glob:Thumbs.db
+glob:TestResults
