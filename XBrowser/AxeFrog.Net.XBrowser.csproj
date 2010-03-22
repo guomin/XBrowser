@@ -33,7 +33,7 @@
   <ItemGroup>
     <Reference Include="HtmlAgilityPack, Version=1.3.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Dependencies\HtmlAgilityPack.dll</HintPath>
+      <HintPath>..\Dependencies\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -52,7 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\axefrogcore\Core\AxeFrog.csproj">
+    <ProjectReference Include="..\..\axefrogcore\Core\AxeFrog.csproj">
       <Project>{EFDB927C-67B6-4322-9346-F41078886376}</Project>
       <Name>AxeFrog</Name>
     </ProjectReference>
