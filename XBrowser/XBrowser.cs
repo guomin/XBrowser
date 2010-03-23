@@ -37,13 +37,14 @@ namespace AxeFrog.Net
 		public string Version { get { return "0.1"; } }
 
 		/// <summary>
-		/// Gets the content window for the current request
+		/// Creates a new top-level "window" and stores it in this browser instance. To remove it from the browser, call Close() on the window.
 		/// </summary>
-		public XBrowserWindow Window { get; private set; }
-
+		/// <returns>The new XBrowserWindow instance</returns>
 		public XBrowserWindow CreateWindow()
 		{
-			return new XBrowserWindow(this);
+			var win = new XBrowserWindow(this);
+			_windows.Add(win);
+			return win;
 		}
 	}
 }

@@ -6,7 +6,7 @@ namespace AxeFrog.Net.Html
 	public class XBrowserBodyElement : XBrowserElement
 	{
 		static readonly HashSet<string> AllowedChildNodes = new HashSet<string> { "?" };
-		public XBrowserBodyElement(XBrowserDocument doc, XElement xElement) : base(doc, xElement, AllowedChildNodes)
+		public XBrowserBodyElement(XBrowserDocument doc, XElement xElement) : base(doc, xElement, XBrowserElementType.Body, AllowedChildNodes)
 		{
 			
 		}

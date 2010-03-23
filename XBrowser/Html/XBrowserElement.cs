@@ -8,16 +8,14 @@ namespace AxeFrog.Net.Html
 {
 	public abstract class XBrowserElement : XBrowserNode
 	{
-		protected XBrowserElement(XBrowserDocument doc, XElement node, IEnumerable<string> allowedElementNames) : base(node)
+
+		protected XBrowserElement(XBrowserDocument doc, XElement node, XBrowserElementType elementType, IEnumerable<string> allowedElementNames) : base(node)
 		{
+			ElementType = elementType;
 			Document = doc;
 			Name = node.Name.LocalName.ToLower();
 			NodesInternal = new List<XBrowserNode>();
 			AddNodesInternal(allowedElementNames);
-		}
-
-		private XBrowserElement(XBrowserDocument doc, XElement node) : base(node)
-		{
 		}
 
 		private void AddNodesInternal(IEnumerable<string> allowedElementNames)
@@ -67,6 +65,7 @@ namespace AxeFrog.Net.Html
 		public string Name { get; protected set; }
 		public new XElement XNode { get { return (XElement)base.XNode; } }
 		public string Text { get { return XNode.Value; } }
+		public XBrowserElementType ElementType { get; private set; }
 
 		protected IEnumerable<XElement> FilterChildElements(IEnumerable<string> allowedElementNames)
 		{

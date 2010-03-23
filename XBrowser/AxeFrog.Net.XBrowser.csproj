@@ -54,6 +54,9 @@
   <ItemGroup>
     <Compile Include="HtmlParser.cs" />
     <Compile Include="HtmlParserException.cs" />
+    <Compile Include="Html\Internal\DomDocument.cs" />
+    <Compile Include="Html\Internal\DomHtmlElement.cs" />
+    <Compile Include="Html\Internal\DomWindow.cs" />
     <Compile Include="Html\XBrowserBodyElement.cs" />
     <Compile Include="Html\XBrowserElement.cs" />
     <Compile Include="Html\XBrowserHeadElement.cs" />
@@ -74,6 +77,7 @@
     <Compile Include="Legacy\XHtmlHttpBrowser.cs" />
     <Compile Include="XBrowserDocument.cs" />
     <Compile Include="Html\XBrowserHtmlElement.cs" />
+    <Compile Include="XBrowserElementType.cs" />
     <Compile Include="XBrowserWindowException.cs" />
     <Compile Include="XBrowserWindow.cs" />
     <Compile Include="XBrowserRequest.cs" />
@@ -84,6 +88,9 @@
       <Project>{EFDB927C-67B6-4322-9346-F41078886376}</Project>
       <Name>AxeFrog</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Html\Internal\_readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
