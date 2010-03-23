@@ -8,9 +8,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace AxeFrog.Net.XBrowser
+namespace AxeFrog.Net
 {
-	public class CookieStore : IEnumerable<Cookie>
+	public class XBrowserCookieStore : IEnumerable<Cookie>
 	{
 		private static readonly Regex RxSplitCookiesByComma = new Regex(@"(?<!expires\s*=\s*[A-Za-z]{3}),", RegexOptions.ExplicitCapture);
 		private static readonly Regex RxMatchCookieDomain = new Regex(@"^\.[A-Za-z]+(\.[A-Za-z]+)+$", RegexOptions.ExplicitCapture);
@@ -22,12 +22,12 @@ namespace AxeFrog.Net.XBrowser
 		public IEnumerator<Cookie> GetEnumerator() { return _cookies.GetEnumerator(); }
 		IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
 
-		public CookieStore()
+		public XBrowserCookieStore()
 		{
 			_cookies = new List<Cookie>();
 		}
 
-		public CookieStore(string cookieHeaderValue)
+		public XBrowserCookieStore(string cookieHeaderValue)
 		{
 			_cookies = Parse(cookieHeaderValue);
 			RemoveExpiredCookies();
@@ -104,8 +104,7 @@ namespace AxeFrog.Net.XBrowser
 
 		public void RemoveExpiredCookies()
 		{
-			//if(!requestUri.Host.ToLower().EndsWith(value.ToLower().Substring(1))) // must be a subset of the requesting domain
-			//    continue;
+			_cookies = _cookies.Where(c => !c.Expired).ToList();
 		}
 	}
 }

@@ -3,8 +3,9 @@ using System.Collections.Specialized;
 using System.Drawing;
 using System.Net;
 
-namespace AxeFrog.Net.XBrowser
+namespace AxeFrog.Net
 {
+	[Obsolete]
 	public abstract class HttpBrowser : IDisposable
 	{
 		public abstract void SetProxy(string host, int port);
@@ -76,6 +77,7 @@ namespace AxeFrog.Net.XBrowser
 		public abstract bool ContainsText(string text);
 	}
 
+	[Obsolete]
 	public class HttpRequestLog
 	{
 		public string Text { get; set; }
@@ -87,6 +89,7 @@ namespace AxeFrog.Net.XBrowser
 		public Uri Url { get; set; }
 	}
 
+	[Obsolete]
 	public enum FindBy
 	{
 		Name,
@@ -101,6 +104,7 @@ namespace AxeFrog.Net.XBrowser
 		PartialId
 	}
 
+	[Obsolete]
 	public enum ElementType
 	{
 		Anchor,

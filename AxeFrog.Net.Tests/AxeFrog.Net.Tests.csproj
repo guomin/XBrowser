@@ -40,7 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XBrowser\CookieStoreTests.cs" />
+    <Compile Include="XBrowserTests\CookieStoreTests.cs" />
+    <Compile Include="XBrowserTests\SiteTests\Delicious.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AuthoringTests.txt" />

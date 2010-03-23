@@ -5,11 +5,12 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
+using AxeFrog.Net.Html;
 using HtmlAgilityPack;
 
-namespace AxeFrog.Net.Html
+namespace AxeFrog.Net
 {
-	public class HtmlParser
+	public static class HtmlParser
 	{
 		static HtmlParser()
 		{
@@ -21,9 +22,9 @@ namespace AxeFrog.Net.Html
 			return XDocument.Parse("<?xml version=\"1.0\"?>\r\n<html><body /></html>");
 		}
 
-		public static XDocument Parse(string html)
+		public static XDocument SanitizeHtml(string html)
 		{
-			var xmlStr = SanitizeHtmlToXml(html);
+			var xmlStr = SanitizeInternal(html);
 			XDocument doc;
 			try { doc = XDocument.Parse(xmlStr); }
 			catch(XmlException ex)
@@ -46,7 +47,7 @@ namespace AxeFrog.Net.Html
 			return doc;
 		}
 
-		private static string SanitizeHtmlToXml(string html)
+		private static string SanitizeInternal(string html)
 		{
 			var hdoc = new HtmlDocument();
 			hdoc.LoadHtml(html ?? "");
@@ -63,7 +64,6 @@ namespace AxeFrog.Net.Html
 				}
 			}
 		}
-
 		private static string SanitizeXmlString(string xml)
 		{
 			if(xml == null)
@@ -75,7 +75,6 @@ namespace AxeFrog.Net.Html
 
 			return buffer.ToString();
 		}
-
 		private static bool IsLegalXmlChar(int character)
 		{
 			return

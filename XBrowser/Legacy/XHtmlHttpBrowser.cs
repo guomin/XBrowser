@@ -9,10 +9,10 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Xml;
 using System.Xml.Linq;
-using AxeFrog.Net.Html;
 
-namespace AxeFrog.Net.XBrowser
+namespace AxeFrog.Net
 {
+	[Obsolete]
 	public class XHtmlHttpBrowser : HttpBrowser
 	{
 		public XHtmlHttpBrowser()
@@ -490,7 +490,7 @@ namespace AxeFrog.Net.XBrowser
 				{
 					try
 					{
-						_doc = HtmlParser.Parse(_currentHtml);
+						_doc = HtmlParser.SanitizeHtml(_currentHtml);
 					}
 					catch(HtmlParserException ex)
 					{

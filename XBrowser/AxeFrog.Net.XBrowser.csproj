@@ -8,7 +8,7 @@
     <ProjectGuid>{F95787C8-FAEC-4364-907B-AE5D3DE2096F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AxeFrog.Net.XBrowser</RootNamespace>
+    <RootNamespace>AxeFrog.Net</RootNamespace>
     <AssemblyName>AxeFrog.Net.XBrowser</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.3.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -48,26 +52,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HtmlParser.cs" />
+    <Compile Include="HtmlParserException.cs" />
+    <Compile Include="Html\XBrowserBodyElement.cs" />
+    <Compile Include="Html\XBrowserElement.cs" />
+    <Compile Include="Html\XBrowserHeadElement.cs" />
+    <Compile Include="Html\XBrowserNode.cs" />
+    <Compile Include="Html\XBrowserTextNode.cs" />
+    <Compile Include="Html\XBrowserTitleElement.cs" />
+    <Compile Include="Html\XBrowserUnknownHtmlElement.cs" />
+    <Compile Include="XBrowserCookieStore.cs" />
+    <Compile Include="Legacy\HtmlResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Legacy\HttpBrowser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XBrowser.cs" />
+    <Compile Include="XBrowserConfiguration.cs" />
+    <Compile Include="Legacy\XHtmlElement.cs" />
+    <Compile Include="Legacy\XHtmlHttpBrowser.cs" />
+    <Compile Include="XBrowserDocument.cs" />
+    <Compile Include="Html\XBrowserHtmlElement.cs" />
+    <Compile Include="XBrowserWindowException.cs" />
+    <Compile Include="XBrowserWindow.cs" />
+    <Compile Include="XBrowserRequest.cs" />
+    <Compile Include="XBrowserResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\axefrogcore\Core\AxeFrog.csproj">
       <Project>{EFDB927C-67B6-4322-9346-F41078886376}</Project>
       <Name>AxeFrog</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AxeFrog.Net.Html\AxeFrog.Net.Html.csproj">
-      <Project>{FF2B0B80-DE6C-4E07-B6EF-CCA7542B842A}</Project>
-      <Name>AxeFrog.Net.Html</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="CookieStore.cs" />
-    <Compile Include="HtmlResult.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="HttpBrowser.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="XBrowser.cs" />
-    <Compile Include="XHtmlElement.cs" />
-    <Compile Include="XHtmlHttpBrowser.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

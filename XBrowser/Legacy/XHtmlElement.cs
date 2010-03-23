@@ -2,8 +2,9 @@
 using System.Linq;
 using System.Xml.Linq;
 
-namespace AxeFrog.Net.XBrowser
+namespace AxeFrog.Net
 {
+	[Obsolete]
 	public class XHtmlElement : IElement
 	{
 		private readonly XElement _element;

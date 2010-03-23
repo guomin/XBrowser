@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AxeFrog.Net.XBrowser
+namespace AxeFrog.Net
 {
+	[Obsolete]
 	public interface IElement
 	{
 		string TagName { get; }
@@ -19,6 +20,7 @@ namespace AxeFrog.Net.XBrowser
 		string GetAttribute(string name);
 	}
 
+	[Obsolete]
 	public class HtmlResult
 	{
 		private IElement _current;
