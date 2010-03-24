@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace AxeFrog.Net
 {
@@ -10,6 +11,8 @@ namespace AxeFrog.Net
 			MaxRedirectsPerRequest = 10;
 			DefaultRequestTimeout = 30000;
 			AllowNonConformingDocumentStructure = true;
+			DefaultWindowClientSize = new Size(1024, 768);
+			ScreenSize = new Size(1440, 900);
 		}
 
 		/// <summary>
@@ -32,8 +35,19 @@ namespace AxeFrog.Net
 		/// <summary>
 		/// Forces the parsed document structure to conform to the document type specification. At present, all documents are
 		/// read according to the HTML5 specification; a future version of XBrowser may adjust the way documents are read according
-		/// to the DOCTYPE for the given page. The default value for this property is true.
+		/// to the DOCTYPE for the given page. The default value is true.
 		/// </summary>
 		public bool AllowNonConformingDocumentStructure { get; set; }
+
+		/// <summary>
+		/// Gets or sets the default dimensions that the client area of a browser window is assumed to be running at. New windows created
+		/// by XBrowser.CreateWindow() will be initialised using this value. The default value is 1024x768;
+		/// </summary>
+		public Size DefaultWindowClientSize { get; set; }
+
+		/// <summary>
+		/// Gets or sets the assumed screen resolution in which the browser is running. The default value is 1440x900.
+		/// </summary>
+		public Size ScreenSize { get; set; }
 	}
 }
