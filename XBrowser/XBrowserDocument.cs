@@ -7,41 +7,53 @@ namespace AxeFrog.Net
 {
 	public class XBrowserDocument
 	{
-		private readonly XBrowserResponse _response;
-		private readonly XDocument _doc;
-		private XBrowserElement _rootElement;
-
 		internal XBrowserDocument(Uri url, XBrowserWindow window, XBrowserResponse response)
 		{
 			Url = url;
 			Window = window;
-			_response = response;
+			Response = response;
 			try
 			{
-				_doc = HtmlParser.SanitizeHtml(response.ResponseText);
+				XDocument = HtmlParser.SanitizeHtml(response.ResponseText);
 			}
 			catch(HtmlParserException)
 			{
-				_doc = HtmlParser.CreateBlankHtmlDocument();
+				XDocument = HtmlParser.CreateBlankHtmlDocument();
 			}
 			
-			if(_doc.Root == null)
-				_rootElement = new XBrowserHtmlElement(this, new XElement("html"));
+			if(XDocument.Root == null)
+				RootElement = new XBrowserHtmlElement(this, new XElement("html"));
 			else
 			{
-				if(_doc.Root.Name.LocalName.ToLower() != "html")
+				if(XDocument.Root.Name.LocalName.ToLower() != "html")
 					if(window.Browser.Config.AllowNonConformingDocumentStructure)
-						_rootElement = XBrowserElement.Create(this, _doc.Root);
+						RootElement = XBrowserElement.Create(this, XDocument.Root);
 					else
-						_rootElement = new XBrowserHtmlElement(this, new XElement("html"));
+						RootElement = new XBrowserHtmlElement(this, new XElement("html"));
 				else
-					_rootElement = new XBrowserHtmlElement(this, _doc.Root);
+					RootElement = new XBrowserHtmlElement(this, XDocument.Root);
 			}
 		}
 
-		public XBrowserResponse Response { get { return _response; } }
-		public XDocument XDocument { get { return _doc; } }
-		public XBrowserWindow Window { get; set; }
+		/// <summary>
+		/// Gets the response object that was returned as a result of the request that generated this XBrowserDocument instance
+		/// </summary>
+		public XBrowserResponse Response { get; private set; }
+
+		/// <summary>
+		/// Gets the underlying XDocument that represents the originally-parsed HTML document structure
+		/// </summary>
+		public XDocument XDocument { get; private set; }
+
+		/// <summary>
+		/// Gets the parent window object to which the document belongs
+		/// </summary>
+		public XBrowserWindow Window { get; private set; }
+
+		/// <summary>
+		/// Gets the root element for the document. This is usually an XBrowserHtmlElement instance.
+		/// </summary>
+		public XBrowserElement RootElement { get; private set; }
 
 		/// <summary>
 		/// Gets or sets the URL of the current page. This value is also used internally by XBrowser for determining
@@ -56,5 +68,6 @@ namespace AxeFrog.Net
 		/// </summary>
 		/// <remarks>Spec: http://dev.w3.org/html5/spec/Overview.html#document.title</remarks>
 		public string Title { get { return ((XDocument.Descendants().FirstOrDefault(e => e.Name.LocalName.ToLower() == "title") ?? new XElement("title")).Value ?? "").Trim(); } }
+
 	}
 }

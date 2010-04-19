@@ -1,15 +1,15 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AxeFrog.Net.XBrowser", "XBrowser\AxeFrog.Net.XBrowser.csproj", "{F95787C8-FAEC-4364-907B-AE5D3DE2096F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AxeFrog.Net.Tests", "AxeFrog.Net.Tests\AxeFrog.Net.Tests.csproj", "{F3739674-BCB2-485C-94F6-3E288EEDDFB4}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{08CA6574-D0B1-4516-B180-8C9C5164AFAB}"
 	ProjectSection(SolutionItems) = preProject
 		AxeFrog.Net.XBrowser.vsmdi = AxeFrog.Net.XBrowser.vsmdi
 		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AxeFrog.Net.XBrowser", "XBrowser\AxeFrog.Net.XBrowser.csproj", "{F95787C8-FAEC-4364-907B-AE5D3DE2096F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AxeFrog.Net.Tests", "AxeFrog.Net.Tests\AxeFrog.Net.Tests.csproj", "{F3739674-BCB2-485C-94F6-3E288EEDDFB4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AxeFrog", "..\axefrogcore\Core\AxeFrog.csproj", "{EFDB927C-67B6-4322-9346-F41078886376}"
 EndProject

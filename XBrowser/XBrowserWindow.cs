@@ -29,16 +29,7 @@ namespace AxeFrog.Net
 		/// <param name="url">The url to navigate to</param>
 		public void Navigate(string url)
 		{
-			Uri uri;
-			try
-			{
-				uri = new Uri(url);
-			}
-			catch(Exception ex)
-			{
-				throw new XBrowserWindowException(this, ex);
-			}
-			Navigate(uri);
+			Navigate(url, false);
 		}
 
 		/// <summary>
@@ -48,8 +39,41 @@ namespace AxeFrog.Net
 		/// <param name="url">The url to navigate to</param>
 		public void Navigate(Uri url)
 		{
+			Navigate(url, false);
+		}
+
+		/// <summary>
+		/// Navigates to the specified url.
+		/// </summary>
+		/// <param name="url">The url to navigate to</param>
+		/// <param name="block">If true, returns when navigation is complete, otherwise returns immediately. To be notified of completion
+		/// for non-blocking calls, subscribe to Navigated or NavigateException, or call WaitUntilReady().</param>
+		public void Navigate(string url, bool block)
+		{
+			Uri uri;
+			try
+			{
+				uri = new Uri(url);
+			}
+			catch(Exception ex)
+			{
+				throw new XBrowserWindowException(this, ex);
+			}
+			Navigate(uri, block);
+		}
+
+		/// <summary>
+		/// Navigates to the specified url.
+		/// </summary>
+		/// <param name="url">The url to navigate to</param>
+		/// <param name="block">If true, returns when navigation is complete, otherwise returns immediately. To be notified of completion
+		/// for non-blocking calls, subscribe to Navigated or NavigateException, or call WaitUntilReady().</param>
+		public void Navigate(Uri url, bool block)
+		{
 			IsNavigating = true;
 			new Thread(() => NavigateInternal(url)).Start();
+			if(block)
+				WaitUntilReady();
 		}
 
 		/// <summary>

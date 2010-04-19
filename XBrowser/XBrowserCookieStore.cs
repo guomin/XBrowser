@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 
@@ -31,6 +32,62 @@ namespace AxeFrog.Net
 			RemoveExpiredCookies();
 		}
 
+		class CookieComparer : IEqualityComparer<Cookie>
+		{
+			public static bool IsTheSameAs(Cookie cookie, Cookie otherCookie)
+			{
+				return cookie.Secure == otherCookie.Secure
+					&& cookie.Name == otherCookie.Name
+					&& cookie.Domain == otherCookie.Domain
+					&& cookie.Path == otherCookie.Path;
+			}
+
+			public bool Equals(Cookie x, Cookie y)
+			{
+				return IsTheSameAs(x, y);
+			}
+
+			public int GetHashCode(Cookie obj)
+			{
+				return obj.GetHashCode();
+			}
+		}
+
+		public void UpdateFromHeader(string cookieHeaderValue)
+		{
+			RemoveExpiredCookies();
+			if(!string.IsNullOrEmpty(cookieHeaderValue))
+				lock(this)
+				{
+					var list = Parse(cookieHeaderValue);
+					_cookies = _cookies.Except(list, new CookieComparer()).ToList();
+					_cookies.AddRange(list);
+				}
+		}
+
+		public string GetHeader(Uri uri)
+		{
+			lock(this)
+			{
+				var sb = new StringBuilder();
+				foreach(var cookie in _cookies)
+				{
+					if(uri.Host.EndsWith(cookie.Domain)
+					   && (string.IsNullOrEmpty(cookie.Path) || uri.AbsolutePath.StartsWith(cookie.Path))
+					   && !cookie.Expired && !cookie.Discard
+					   && (!cookie.Secure || uri.Scheme == "https"))
+					{
+						if(sb.Length > 0)
+							sb.Append("; ");
+						sb.Append(HttpUtility.UrlEncode(cookie.Name));
+						sb.Append("=");
+						sb.Append(HttpUtility.UrlEncode(cookie.Value));
+					}
+				}
+				return sb.Length == 0 ? null : sb.ToString();
+			}
+		}
+
 		public static List<Cookie> Parse(string cookieHeaderValue)
 		{
 			var list = new List<Cookie>();
@@ -52,14 +109,14 @@ namespace AxeFrog.Net
 								var match = RxOldDateCheck.Match(value);
 								if(match.Success)
 									value = string.Format("{0}, {1:00}-{2}-{3} {4:00}:{5:00}:{6:00} {7}",
-									                      match.Groups["weekday"],
-									                      int.Parse(match.Groups["day"].Value),
-									                      match.Groups["month"].Value,
-									                      match.Groups["year"].Value,
-									                      int.Parse(match.Groups["hour"].Value),
-									                      int.Parse(match.Groups["minute"].Value),
-									                      int.Parse(match.Groups["second"].Value),
-									                      match.Groups["timezone"].Success ? match.Groups["timezone"].Value : "GMT"
+														  match.Groups["weekday"],
+														  int.Parse(match.Groups["day"].Value),
+														  match.Groups["month"].Value,
+														  match.Groups["year"].Value,
+														  int.Parse(match.Groups["hour"].Value),
+														  int.Parse(match.Groups["minute"].Value),
+														  int.Parse(match.Groups["second"].Value),
+														  match.Groups["timezone"].Success ? match.Groups["timezone"].Value : "GMT"
 										);
 								if(DateTime.TryParse(value, out dt))
 									cookie.Expires = dt;
@@ -102,7 +159,8 @@ namespace AxeFrog.Net
 
 		public void RemoveExpiredCookies()
 		{
-			_cookies = _cookies.Where(c => !c.Expired).ToList();
+			lock(this)
+				_cookies = _cookies.Where(c => !c.Expired).ToList();
 		}
 	}
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net;
+using AxeFrog.Net.Html;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AxeFrog.Net.Tests.XBrowserTests.SiteTests
@@ -17,6 +19,9 @@ namespace AxeFrog.Net.Tests.XBrowserTests.SiteTests
 			window.WaitUntilReady();
 			Assert.AreEqual((window.Document.Url ?? new Uri("about:blank")).ToString(), new Uri("http://delicious.com").ToString(), "Should have redirected to http://delicious.com");
 			Assert.AreEqual(window.Document.Title, "Delicious", "Browser title should have been \"Delicious\"");
+			// what do i want to find: tagName | tagType | tagGroupType
+			// what attribute(s) must it have?
+			//window.Find<XBrowserAnchorElement>("a[name=x]");
 		}
 	}
 }

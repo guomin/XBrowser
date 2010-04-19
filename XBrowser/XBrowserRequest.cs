@@ -67,6 +67,9 @@ namespace AxeFrog.Net
 				handleRedirect = false;
 
 				HttpWebRequest req = (HttpWebRequest)WebRequest.Create(uri);
+				var cookieHeader = _cookies.GetHeader(uri);
+				if(cookieHeader != null)
+					req.Headers.Add("Cookie", cookieHeader);
 				req.ContentType = "application/x-www-form-urlencoded";
 				req.Accept = "*/*";
 				req.AllowAutoRedirect = false;
@@ -75,7 +78,7 @@ namespace AxeFrog.Net
 				req.Timeout = Timeout;
 
 				// TO DO:
-				// cookies, headers, proxy, timeout
+				// cookies, headers, proxy
 				// alternate content type for forms with input[type=file] fields
 				// accept (when does this need to change?)
 
@@ -87,6 +90,7 @@ namespace AxeFrog.Net
 				{
 					return new XBrowserResponse(ex);
 				}
+				_cookies.UpdateFromHeader(response.Headers[HttpResponseHeader.SetCookie]);
 
 				var status = (int)response.StatusCode;
 				if(status == 301 || status == 302 || status == 303 || status == 307)
