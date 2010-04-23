@@ -182,9 +182,11 @@
     <Compile Include="Html\XBrowserUnknownHtmlElement.cs" />
     <Compile Include="Html\XBrowserVarElement.cs" />
     <Compile Include="Html\XBrowserVideoElement.cs" />
+    <Compile Include="Parser\HtmlTokenizer.cs" />
     <Compile Include="Query\Selectors\ChildSelector.cs" />
     <Compile Include="Query\Selectors\CommaSelector.cs" />
     <Compile Include="Query\Selectors\AllSelector.cs" />
+    <Compile Include="Query\Selectors\ClassSelector.cs" />
     <Compile Include="Query\Selectors\IdSelector.cs" />
     <Compile Include="Query\Selectors\DescendentSelector.cs" />
     <Compile Include="Query\ExpressionUtil.cs" />
@@ -216,13 +218,8 @@
     <Compile Include="XBrowserResponse.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\axefrogcore\Core\AxeFrog.csproj">
-      <Project>{EFDB927C-67B6-4322-9346-F41078886376}</Project>
-      <Name>AxeFrog</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Html\Internal\_readme.txt" />
+    <Content Include="Parser\_readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
@@ -243,6 +240,12 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\axefrogcore\Core\AxeFrog.csproj">
+      <Project>{EFDB927C-67B6-4322-9346-F41078886376}</Project>
+      <Name>AxeFrog</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

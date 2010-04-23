@@ -50,11 +50,13 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XBrowserTests\CookieStoreTests.cs" />
+    <Compile Include="XBrowserTests\ParserTests.cs" />
     <Compile Include="XBrowserTests\QueryTests.cs" />
     <Compile Include="XBrowserTests\SiteTests\Delicious.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AuthoringTests.txt" />
+    <Content Include="XBrowserTests\HtmlTests\malformed2.htm" />
     <Content Include="XBrowserTests\HtmlTests\basic1.htm" />
     <Content Include="XBrowserTests\HtmlTests\basic2.htm" />
     <Content Include="XBrowserTests\HtmlTests\malformed1.htm" />

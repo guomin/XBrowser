@@ -101,6 +101,7 @@ namespace AxeFrog.Net.Tests.XBrowserTests
 		[TestMethod]
 		public void Test_AttributeSelector()
 		{
+			throw new NotImplementedException();
 		}
 
 		/// <summary>
@@ -128,6 +129,20 @@ namespace AxeFrog.Net.Tests.XBrowserTests
 			Assert.AreEqual(1, elements.Length, "Exactly 1 element should have been returned");
 			Assert.IsTrue(elements[0].Name.LocalName.CaseInsensitiveCompare("a"), "Element returned should have been an anchor tag");
 			Assert.AreEqual("link", elements[0].GetAttributeCI("id"), "Element returned should have had id=link");
+		}
+
+		/// <summary>
+		/// Class Selector (“.class”) - Selects all elements with the given class.
+		/// </summary>
+		[TestMethod]
+		public void Test_ClassSelector()
+		{
+			var window = GetWindow(TestHtml.Basic2);
+			var elements = XQuery.Execute(".highlight", window.Document.XDocument);
+	
+			Assert.AreEqual(2, elements.Length, "Exactly 2 elements should have been returned");
+			Assert.IsTrue(elements.All(e => e.Name.LocalName.CaseInsensitiveCompare("p")), "Elements returned should have been P tags");
+			Assert.IsTrue(elements.All(e => e.GetAttributeCI("class") == "highlight"), "Element returned should have had class=highlight");
 		}
 
 		/// <summary>
