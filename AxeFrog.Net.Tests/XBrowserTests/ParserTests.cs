@@ -24,20 +24,44 @@ namespace AxeFrog.Net.Tests.XBrowserTests
 			return new WebClient().DownloadString(url);
 		}
 
-		/// <summary>
-		/// All Selector (“*”) - Selects all elements.
-		/// </summary>
 		[TestMethod]
-		public void Test_HtmlTokenizer()
+		public void Test_HtmlTokenizer_Clean()
+		{
+			var html = GetHtml(TestHtml.Basic2);
+			var tokens = HtmlTokenizer.Parse(html);
+			foreach(var token in tokens)
+				if(!(token.Type == TokenType.Text && (token.Raw ?? "").Trim().Length == 0))
+					Console.WriteLine("{0}: {1}", token.Type, Regex.Replace(token.Raw ?? "", @"\s"," "));
+
+			var doc = DocumentBuilder.Parse(tokens);
+		}
+
+		[TestMethod]
+		public void Test_HtmlTokenizer_Malformed()
 		{
 			var html = GetHtml(TestHtml.Malformed2);
 			var tokens = HtmlTokenizer.Parse(html);
 			foreach(var token in tokens)
 				if(!(token.Type == TokenType.Text && (token.Raw ?? "").Trim().Length == 0))
-					//if(token.B != null)
-					//    Console.WriteLine("{0}: {1} = {2}", token.Type, Regex.Replace(token.A ?? "", @"\s"," "), token.B);
-					//else
-						Console.WriteLine("{0}: {1}", token.Type, Regex.Replace(token.Raw ?? "", @"\s"," "));
+					Console.WriteLine("{0}: {1}", token.Type, Regex.Replace(token.Raw ?? "", @"\s"," "));
+		}
+
+		[TestMethod]
+		public void Test_DocumentBuilder_Clean()
+		{
+			var html = GetHtml(TestHtml.Basic2);
+			var tokens = HtmlTokenizer.Parse(html);
+			var doc = DocumentBuilder.Parse(tokens);
+			Console.WriteLine(doc);
+		}
+
+		[TestMethod]
+		public void Test_DocumentBuilder_Malformed()
+		{
+			var html = GetHtml(TestHtml.Malformed2);
+			var tokens = HtmlTokenizer.Parse(html);
+			var doc = DocumentBuilder.Parse(tokens);
+			Console.WriteLine(doc);
 		}
 	}
 }

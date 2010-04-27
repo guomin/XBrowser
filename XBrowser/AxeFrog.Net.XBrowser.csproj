@@ -182,7 +182,11 @@
     <Compile Include="Html\XBrowserUnknownHtmlElement.cs" />
     <Compile Include="Html\XBrowserVarElement.cs" />
     <Compile Include="Html\XBrowserVideoElement.cs" />
+    <Compile Include="Parser\DocumentArea.cs" />
+    <Compile Include="Parser\DocumentBuilder.cs" />
     <Compile Include="Parser\HtmlTokenizer.cs" />
+    <Compile Include="Parser\IElementPositioningRule.cs" />
+    <Compile Include="Parser\PositioningRules\Abbr.cs" />
     <Compile Include="Query\Selectors\ChildSelector.cs" />
     <Compile Include="Query\Selectors\CommaSelector.cs" />
     <Compile Include="Query\Selectors\AllSelector.cs" />
@@ -219,7 +223,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Html\Internal\_readme.txt" />
-    <Content Include="Parser\_readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

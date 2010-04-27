@@ -33,7 +33,7 @@ namespace AxeFrog.Net.Parser
 			return context.Tokens;
 		}
 
-		static Regex RxNextToken = new Regex(@"\<((\!((?<doctype>DOCTYPE\s)|(?<comment>(--)?)))|(?<xmldecl>\?\s?xml)|(?<element>[a-z])|(?<close>/[a-z]))", RegexOptions.ExplicitCapture | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		static Regex RxNextToken = new Regex(@"\<((\!((?<doctype>DOCTYPE)|(?<comment>(--)?)))|(?<xmldecl>\?\s?xml)|(?<element>[a-z])|(?<close>/[a-z]))", RegexOptions.ExplicitCapture | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 		static void ReadNext(ParserContext context)
 		{
 			while(!context.EndOfString)
@@ -83,7 +83,7 @@ namespace AxeFrog.Net.Parser
 			var start = context.Index;
 			var n = context.Html.IndexOf('>', context.Index);
 			context.Index = n == -1 ? context.Html.Length : n + 1;
-			context.Tokens.Add(new HtmlParserToken { Type = TokenType.Comment, Raw = context.Html.Substring(start, context.Index - start) });
+			context.Tokens.Add(new HtmlParserToken { Type = TokenType.DocTypeDeclaration, Raw = context.Html.Substring(start, context.Index - start) });
 		}
 
 		static Regex RxStartComment = new Regex(@"\<\!(--)?", RegexOptions.ExplicitCapture);
@@ -215,7 +215,7 @@ namespace AxeFrog.Net.Parser
 			elementToken.Raw = context.Html.Substring(start, context.Index - start);
 		}
 
-		static Regex RxReadCloseAttribute = new Regex(@"\<(?<name>[^\s=\>]+)[^\>]*\>");
+		static Regex RxReadCloseAttribute = new Regex(@"\</(?<name>[^\s=\>]+)[^\>]*\>");
 		private static void ReadCloseElement(ParserContext context)
 		{
 			var match = RxReadCloseAttribute.Match(context.Html, context.Index);
@@ -227,7 +227,7 @@ namespace AxeFrog.Net.Parser
 			}
 			else
 			{
-				context.Tokens.Add(new HtmlParserToken { Type = TokenType.ElementEnd, Raw = match.Value, A = match.Groups["name"].Value });
+				context.Tokens.Add(new HtmlParserToken { Type = TokenType.CloseElement, Raw = match.Value, A = match.Groups["name"].Value });
 				context.Index += match.Length;
 			}
 		}
@@ -241,7 +241,7 @@ namespace AxeFrog.Net.Parser
 		DocTypeDeclaration,
 		Element,
 		Attribute,
-		ElementEnd
+		CloseElement
 	}
 
 	public class HtmlParserToken
@@ -250,5 +250,14 @@ namespace AxeFrog.Net.Parser
 		public string A { get; set; }
 		public string B { get; set; }
 		public string Raw { get; set; }
+
+		public override string ToString()
+		{
+			if(Raw == null)
+				return base.ToString();
+			if(Raw.Length < 50)
+				return Raw;
+			return string.Concat(Raw.Substring(0, 47), "...");
+		}
 	}
 }
