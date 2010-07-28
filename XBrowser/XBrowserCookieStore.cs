@@ -7,7 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace AxeFrog.Net
+namespace XBrowserProject
 {
 	public class XBrowserCookieStore : IEnumerable<Cookie>
 	{

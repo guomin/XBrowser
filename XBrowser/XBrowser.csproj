@@ -1,0 +1,707 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F95787C8-FAEC-4364-907B-AE5D3DE2096F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XBrowserProject</RootNamespace>
+    <AssemblyName>XBrowser</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrowserModel\Internal\BrowsingContext.cs" />
+    <Compile Include="BrowserModel\Internal\History.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlElementFactory.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\IAttr.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\ICDATASection.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\ICharacterData.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\IComment.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\IDocument.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\IDocumentFragment.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\IDocumentType.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\IDOMImplementation.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\IElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\IEntity.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\IEntityReference.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\IFormChild.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\INamedNodeMap.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\INode.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\INodeList.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\INotation.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\IProcessingInstruction.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\IResettable.cs" />
+    <Compile Include="BrowserModel\Interfaces\Core\IText.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLAnchorElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLAppletElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLAreaElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLBaseElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLBaseFontElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLBodyElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLBRElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLButtonElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLCollection.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLDirectoryElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLDivElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLDListElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLDocument.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLFieldsetElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLFontElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLFormElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLFrameElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLFramesetElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLHeadElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLHeadingElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLHistory.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLHRElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLHtmlElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLIframeElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLImageElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLInputElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLIsIndexElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLLabelElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLLegendElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLLIElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLLinkElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLLocation.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLMapElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLMenuElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLMetaElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLModElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLObjectElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLOListElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLOptGroupElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLOptionElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLOptionsCollection.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLParagraphElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLParamElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLPreElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLQuoteElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLScriptElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLSelectElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLStyleElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLTableCaptionElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLTableCellElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLTableColElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLTableElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLTableRowElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLTableSectionElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLTextAreaElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLTitleElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLUListElement.cs" />
+    <Compile Include="BrowserModel\Interfaces\HTML\IHTMLWindow.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlAnchorElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlAppletElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlAreaElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlAttributeNames.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlBaseElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlBaseFontElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlBodyElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlBRElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlButtonElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlCollection.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlCommentNode.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlDirectoryElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlDivElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlDListElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlDocument.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlElementTagNames.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlFieldSetElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlFontElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlFormElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlFrameElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlFrameSetElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlHeadElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlHeadingElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlHRElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlHtmlElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlIframeElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlImageElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlInputElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlIsIndexElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlLabelElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlLegendElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlLIElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlLinkElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlMapElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlMenuElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlMetaElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlModElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlObjectElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlOListElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlOptGroupElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlOptionElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlOptionsCollection.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlParagraphElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlParamElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlPreElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlQuoteElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlScriptElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlSelectElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlStyleElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlTableCaptionElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlTableCellElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlTableColElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlTableElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlTableRowElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlTableSectionElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlTextAreaElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlTextNode.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlTitleElement.cs" />
+    <Compile Include="BrowserModel\Internal\HtmlDom\HtmlUListElement.cs" />
+    <Compile Include="BrowserModel\Internal\Location.cs" />
+    <Compile Include="BrowserModel\Internal\SessionHistory.cs" />
+    <Compile Include="BrowserModel\Internal\Window.cs" />
+    <Compile Include="BrowserModel\Internal\WindowProxy.cs" />
+    <Compile Include="HtmlParser\CharacterReference.cs" />
+    <Compile Include="HtmlParser\ElementStack.cs" />
+    <Compile Include="HtmlParser\FormattingElementList.cs" />
+    <Compile Include="HtmlParser\HtmlCharacterUtilities.cs" />
+    <Compile Include="HtmlParser\ParseError.cs" />
+    <Compile Include="HtmlParser\ParseErrorEventArgs.cs" />
+    <Compile Include="HtmlParser\Parser.cs" />
+    <Compile Include="HtmlParser\States\AfterAfterBodyState.cs" />
+    <Compile Include="HtmlParser\States\AfterAfterFramesetState.cs" />
+    <Compile Include="HtmlParser\States\AfterBodyState.cs" />
+    <Compile Include="HtmlParser\States\AfterFramesetState.cs" />
+    <Compile Include="HtmlParser\States\AfterHeadState.cs" />
+    <Compile Include="HtmlParser\States\BeforeHeadState.cs" />
+    <Compile Include="HtmlParser\States\BeforeHtmlState.cs" />
+    <Compile Include="HtmlParser\States\InBodyState.cs" />
+    <Compile Include="HtmlParser\States\InCaptionState.cs" />
+    <Compile Include="HtmlParser\States\InCellState.cs" />
+    <Compile Include="HtmlParser\States\InColumnGroupState.cs" />
+    <Compile Include="HtmlParser\States\InForeignContentState.cs" />
+    <Compile Include="HtmlParser\States\InFramesetState.cs" />
+    <Compile Include="HtmlParser\States\InHeadNoScriptState.cs" />
+    <Compile Include="HtmlParser\States\InHeadState.cs" />
+    <Compile Include="HtmlParser\States\InitialState.cs" />
+    <Compile Include="HtmlParser\States\InRowState.cs" />
+    <Compile Include="HtmlParser\States\InSelectInTableState.cs" />
+    <Compile Include="HtmlParser\States\InSelectState.cs" />
+    <Compile Include="HtmlParser\States\InTableBodyState.cs" />
+    <Compile Include="HtmlParser\States\InTableState.cs" />
+    <Compile Include="HtmlParser\States\InTableTextState.cs" />
+    <Compile Include="HtmlParser\States\ParserState.cs" />
+    <Compile Include="HtmlParser\States\TextState.cs" />
+    <Compile Include="HtmlParser\States\TreeBuilderState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\CharacterToken.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\CommentToken.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\DocTypeToken.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\EndOfFileToken.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\HtmlTextReader.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\InitialTokenizerState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\AfterAttributeNameState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\AfterAttributeValueQuotedState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\AfterDocTypeNameState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\AfterDocTypePublicIdentifierState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\AfterDocTypePublicKeywordState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\AfterDocTypeSystemIdentifierState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\AfterDocTypeSystemKeywordState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\AttributeNameState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\AttributeValueDoubleQuotedState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\AttributeValueSingleQuotedState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\AttributeValueUnquotedState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\BeforeAttributeNameState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\BeforeAttributeValueState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\BeforeDocTypeNameState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\BeforeDocTypePublicIdentifierState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\BeforeDocTypeSystemIdentifierState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\BetweenDocTypePublicAndSystemIdentifiersState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\BogusCommentState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\BogusDocTypeState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\CDataSectionState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\CharacterReferenceInAttributeValueState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\CharacterReferenceInDataState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\CharacterReferenceInRCDataState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\CommentEndBangState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\CommentEndDashState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\CommentEndSpaceState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\CommentEndState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\CommentStartDashState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\CommentStartState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\CommentState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\DataState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\DocTypeNameState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\DocTypePublicIdentifierDoubleQuotedState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\DocTypePublicIdentifierSingleQuotedState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\DocTypeState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\DocTypeSystemIdentifierDoubleQuotedState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\DocTypeSystemIdentifierSingleQuotedState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\EndTagOpenState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\MarkupDeclarationOpenState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\PlainTextState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\RawTextEndTagNameState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\RawTextEndTagOpenState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\RawTextLessThanSignState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\RawTextState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\RCDataEndTagNameState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\RCDataEndTagOpenState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\RCDataLessThanSignState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\RCDataState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\ScriptDataDoubleEscapedDashDashState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\ScriptDataDoubleEscapedDashState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\ScriptDataDoubleEscapedLessThanSignState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\ScriptDataDoubleEscapedState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\ScriptDataDoubleEscapeEndState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\ScriptDataDoubleEscapeStartState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\ScriptDataEndTagNameState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\ScriptDataEndTagOpenState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\ScriptDataEscapedDashDashState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\ScriptDataEscapedDashState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\ScriptDataEscapedEndTagNameState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\ScriptDataEscapedEndTagOpenState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\ScriptDataEscapedLessThanSignState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\ScriptDataEscapedState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\ScriptDataEscapeStartDashState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\ScriptDataEscapeStartState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\ScriptDataLessThanSignState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\ScriptDataState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\SelfClosingStartTagState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\TagNameState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\States\TagOpenState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\TagToken.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\TagTokenAttribute.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\Token.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\Tokenizer.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\TokenizerState.cs" />
+    <Compile Include="HtmlParser\HtmlTokenizer\TokenType.cs" />
+    <Compile Include="BrowserModel\Public\XBrowserAbbrElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserAddressElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserAnchorElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserAreaElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserArticleElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserAsideElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserAudioElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserBaseElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserBdoElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserBlockquoteElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserBodyElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserBoldElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserBrElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserButtonElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserCanvasElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserCaptionElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserCiteElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserCodeElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserColElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserColgroupElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserCommandElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserDatalistElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserDdElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserDelElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserDetailsElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserDfnElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserDivElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserDlElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserDtElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserEmbedElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserEmElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserFieldsetElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserFigcaptionElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserFigureElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserFooterElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserFormElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserH1Element.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserH2Element.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserH3Element.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserH4Element.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserH5Element.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserH6Element.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserHeadElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserHeaderElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserHgroupElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserHrElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserHtmlElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserIframeElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserImgElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserInputElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserInsElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserItalicElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserKbdElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserKeygenElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserLabelElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserLegendElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserLiElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserLinkElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserMapElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserMarkElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserMenuElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserMetaElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserMeterElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserNavElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserNoscriptElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserObjectElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserOlElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserOptgroupElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserOptionElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserOutputElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserParagraphElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserParamElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserPreElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserProgressElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserQuoteElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserRpElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserRtElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserRubyElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserSampElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserScriptElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserSectionElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserSelectElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserSmallElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserSourceElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserSpanElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserStrongElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserStyleElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserSubElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserSummaryElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserSupElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserTableElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserTbodyElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserTdElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserTextareaElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserTextNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserTfootElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserTheadElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserTimeElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserTitleElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserTrElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserUlElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserUnknownHtmlElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserVarElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserModel\Public\XBrowserVideoElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Query\Selectors\ChildSelector.cs" />
+    <Compile Include="Query\Selectors\CommaSelector.cs" />
+    <Compile Include="Query\Selectors\AllSelector.cs" />
+    <Compile Include="Query\Selectors\ClassSelector.cs" />
+    <Compile Include="Query\Selectors\IdSelector.cs" />
+    <Compile Include="Query\Selectors\DescendentSelector.cs" />
+    <Compile Include="Query\ExpressionUtil.cs" />
+    <Compile Include="Query\SelectorParserCatalog.cs" />
+    <Compile Include="Query\Selectors\ElementSelector.cs" />
+    <Compile Include="Query\XQuery.cs" />
+    <Compile Include="Query\XQueryResultsContext.cs" />
+    <Compile Include="Query\XQueryException.cs" />
+    <Compile Include="Query\XQueryParserContext.cs" />
+    <Compile Include="Query\XQuerySelector.cs" />
+    <Compile Include="Query\XQuerySelectorCreator.cs" />
+    <Compile Include="Utilities\CollectionExtensions.cs" />
+    <Compile Include="Utilities\ObjectExtensions.cs" />
+    <Compile Include="Utilities\StringExtensions.cs" />
+    <Compile Include="Utilities\StringUtil.cs" />
+    <Compile Include="Utilities\TypeExtensions.cs" />
+    <Compile Include="Utilities\XmlExtensions.cs" />
+    <Compile Include="XBrowserCookieStore.cs" />
+    <Compile Include="XBrowser.cs" />
+    <Compile Include="XBrowserConfiguration.cs" />
+    <Compile Include="XBrowserDocument.cs" />
+    <Compile Include="XBrowserElementType.cs" />
+    <Compile Include="XBrowserWindowException.cs" />
+    <Compile Include="XBrowserWindow.cs" />
+    <Compile Include="XBrowserRequest.cs" />
+    <Compile Include="XBrowserResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

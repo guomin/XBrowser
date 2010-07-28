@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 using System.Linq;
 using System.Xml.Linq;
 
-namespace AxeFrog.Net.Query.Selectors
+namespace XBrowserProject.Query.Selectors
 {
 	public class ClassSelector : IXQuerySelector
 	{

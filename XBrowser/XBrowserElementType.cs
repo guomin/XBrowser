@@ -1,4 +1,4 @@
-﻿namespace AxeFrog.Net
+﻿namespace XBrowserProject
 {
 	/// <summary>
 	/// Specifications for each element can be found at http://simon.html5.org/html5-elements

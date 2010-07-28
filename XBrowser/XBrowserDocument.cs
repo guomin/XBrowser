@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Linq;
 using System.Xml.Linq;
-using AxeFrog.Net.Html;
+using System.Xml.XPath;
+using XBrowserProject.Html;
 
-namespace AxeFrog.Net
+namespace XBrowserProject
 {
 	public class XBrowserDocument
 	{
@@ -12,26 +13,19 @@ namespace AxeFrog.Net
 			Url = url;
 			Window = window;
 			Response = response;
-			try
-			{
-				XDocument = HtmlParser.SanitizeHtml(response.ResponseText);
-			}
-			catch(HtmlParserException)
-			{
-				XDocument = HtmlParser.CreateBlankHtmlDocument();
-			}
+			//XDocument = (response.ResponseText ?? "").ParseHtml();
 			
 			if(XDocument.Root == null)
-				RootElement = new XBrowserHtmlElement(this, new XElement("html"));
+			    RootElement = new XBrowserHtmlElement(this, new XElement("html"));
 			else
 			{
-				if(XDocument.Root.Name.LocalName.ToLower() != "html")
-					if(window.Browser.Config.AllowNonConformingDocumentStructure)
-						RootElement = XBrowserElement.Create(this, XDocument.Root);
-					else
-						RootElement = new XBrowserHtmlElement(this, new XElement("html"));
-				else
-					RootElement = new XBrowserHtmlElement(this, XDocument.Root);
+			    if(XDocument.Root.Name.LocalName.ToLower() != "html")
+			        if(window.Browser.Config.AllowNonConformingDocumentStructure)
+			            RootElement = XBrowserElement.Create(this, XDocument.Root);
+			        else
+			            RootElement = new XBrowserHtmlElement(this, new XElement("html"));
+			    else
+			        RootElement = new XBrowserHtmlElement(this, XDocument.Root);
 			}
 		}
 

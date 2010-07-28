@@ -4,8 +4,6 @@ using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
-using AxeFrog.Net.Parser;
-using AxeFrog.Net.Query;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AxeFrog.Net.Tests.XBrowserTests

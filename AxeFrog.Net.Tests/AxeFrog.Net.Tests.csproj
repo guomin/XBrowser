@@ -62,11 +62,7 @@
     <Content Include="XBrowserTests\HtmlTests\malformed1.htm" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\axefrogcore\Core\AxeFrog.csproj">
-      <Project>{EFDB927C-67B6-4322-9346-F41078886376}</Project>
-      <Name>AxeFrog</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\XBrowser\AxeFrog.Net.XBrowser.csproj">
+    <ProjectReference Include="..\XBrowser\XBrowser.csproj">
       <Project>{F95787C8-FAEC-4364-907B-AE5D3DE2096F}</Project>
       <Name>AxeFrog.Net.XBrowser</Name>
     </ProjectReference>

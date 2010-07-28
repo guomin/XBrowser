@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace AxeFrog.Net.Query
+namespace XBrowserProject.Query
 {
 	public interface IXQuerySelector
 	{

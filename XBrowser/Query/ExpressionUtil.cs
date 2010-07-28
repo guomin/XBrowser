@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Text.RegularExpressions;
 
-namespace AxeFrog.Net.Query
+namespace XBrowserProject.Query
 {
 	internal static class ExpressionUtil
 	{

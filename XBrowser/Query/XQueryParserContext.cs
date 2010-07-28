@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace AxeFrog.Net.Query
+namespace XBrowserProject.Query
 {
 	public class XQueryParserContext
 	{

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AxeFrog.Net
+namespace XBrowserProject
 {
 	public class XBrowserWindowException : Exception
 	{

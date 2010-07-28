@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 
-namespace AxeFrog.Net
+namespace XBrowserProject
 {
 	public class XBrowserResponse
 	{

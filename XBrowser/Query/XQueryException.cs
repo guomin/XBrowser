@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AxeFrog.Net.Query
+namespace XBrowserProject.Query
 {
 	public class XQueryException : Exception
 	{

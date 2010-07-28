@@ -2,7 +2,7 @@
 using System.Net;
 using System.Threading;
 
-namespace AxeFrog.Net
+namespace XBrowserProject
 {
 	/// <summary>
 	/// A window represents a container encapsulating a document.

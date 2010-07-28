@@ -2,7 +2,7 @@
 using System.IO;
 using System.Net;
 
-namespace AxeFrog.Net
+namespace XBrowserProject
 {
 	public class XBrowserRequest
 	{

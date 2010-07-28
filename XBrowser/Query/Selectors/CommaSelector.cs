@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
-namespace AxeFrog.Net.Query.Selectors
+namespace XBrowserProject.Query.Selectors
 {
 	public class CommaSelector : IXQuerySelector
 	{
