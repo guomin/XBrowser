@@ -1,8 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using XBrowserProject;
 
-namespace AxeFrog.Net.Tests.XBrowserTests
+namespace XBrowserProject.Tests
 {
 	[TestClass]
 	public class CookieStoreTests

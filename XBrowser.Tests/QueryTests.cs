@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Linq;
-using System.Xml.Linq;
-using AxeFrog.Net.Query;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using XBrowserProject.Query;
 
-namespace AxeFrog.Net.Tests.XBrowserTests
+namespace XBrowserProject.Tests
 {
 	[TestClass]
 	public class QueryTests

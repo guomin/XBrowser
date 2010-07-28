@@ -1,0 +1,16 @@
+axefrogcore/*
+debug/*
+release/*
+Bin/*
+obj/*
+*.csuser
+*.suo
+*.ReSharper
+*.user
+*.tmp
+*.db
+*.orig
+*.bak
+.hg/*
+bin
+obj

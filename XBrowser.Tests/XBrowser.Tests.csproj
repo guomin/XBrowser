@@ -3,20 +3,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>
+    </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F3739674-BCB2-485C-94F6-3E288EEDDFB4}</ProjectGuid>
+    <ProjectGuid>{1FAA53BE-46BE-44DA-A67E-DBF5C54A84E4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AxeFrog.Net.Tests</RootNamespace>
-    <AssemblyName>AxeFrog.Net.Tests</AssemblyName>
+    <RootNamespace>XBrowserProject.Tests</RootNamespace>
+    <AssemblyName>XBrowser.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <UpgradeBackupLocation />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,30 +38,31 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CookieStoreTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XBrowserTests\CookieStoreTests.cs" />
-    <Compile Include="XBrowserTests\ParserTests.cs" />
-    <Compile Include="XBrowserTests\QueryTests.cs" />
-    <Compile Include="XBrowserTests\SiteTests\Delicious.cs" />
+    <Compile Include="QueryTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AuthoringTests.txt" />
-    <Content Include="XBrowserTests\HtmlTests\malformed2.htm" />
-    <Content Include="XBrowserTests\HtmlTests\basic1.htm" />
-    <Content Include="XBrowserTests\HtmlTests\basic2.htm" />
-    <Content Include="XBrowserTests\HtmlTests\malformed1.htm" />
+    <EmbeddedResource Include="Resources\Html\basic1.htm" />
+    <EmbeddedResource Include="Resources\Html\basic2.htm" />
+    <EmbeddedResource Include="Resources\Html\malformed1.htm" />
+    <EmbeddedResource Include="Resources\Html\malformed2.htm" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XBrowser\XBrowser.csproj">
       <Project>{F95787C8-FAEC-4364-907B-AE5D3DE2096F}</Project>
-      <Name>AxeFrog.Net.XBrowser</Name>
+      <Name>XBrowser</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
