@@ -4,7 +4,7 @@ using XBrowserProject.HtmlParser.HtmlTokenizer;
 
 namespace XBrowserProject.HtmlParser.States
 {
-    public class AfterAfterBodyState : ParserState
+    internal class AfterAfterBodyState : ParserState
     {
         /// <summary>
         /// Represents the insertion mode of "after after body"

@@ -3,6 +3,7 @@ debug/*
 release/*
 Bin/*
 obj/*
+_ReSharper.*
 *.csuser
 *.suo
 *.ReSharper

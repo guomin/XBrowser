@@ -1,6 +1,6 @@
 namespace XBrowserProject.HtmlParser.HtmlTokenizer
 {
-    public class DocTypeToken : Token
+    internal class DocTypeToken : Token
     {
         private string tokenName = string.Empty;
         private string tokenSystemId;

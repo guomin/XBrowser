@@ -6,7 +6,7 @@ namespace XBrowserProject.HtmlDom
      * Generic block container. See the DIV element definition in Html 4.01.
      * <p>See also the <a href='http://www.w3.org/TR/2003/REC-DOM-Level-2-Html-20030109'>Document Object Model (DOM) Level 2 Html Specification</a>.
      */
-    public interface IHTMLDivElement : IHTMLElement
+    internal interface IHTMLDivElement : IHTMLElement
     {
         /**
          * Horizontal text alignment. See the align attribute definition in Html 

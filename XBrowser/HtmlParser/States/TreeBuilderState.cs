@@ -1,6 +1,6 @@
 namespace XBrowserProject.HtmlParser.States
 {
-    public abstract class TreeBuilderState
+    internal abstract class TreeBuilderState
     {
         public abstract void ParseToken(Parser parser);
     }

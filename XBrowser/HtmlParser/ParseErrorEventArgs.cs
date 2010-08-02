@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace XBrowserProject.HtmlParser
 {
-    public class ParseErrorEventArgs : EventArgs
+    internal class ParseErrorEventArgs : EventArgs
     {
         private string errorDescription;
         private string errorActionTaken;

@@ -1,7 +1,7 @@
 ﻿using System;
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLImageElement : IHTMLElement
+    internal interface IHTMLImageElement : IHTMLElement
     {
         /**
          * Aligns this object (vertically or horizontally) with respect to its 

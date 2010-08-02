@@ -1,7 +1,7 @@
 ﻿using System;
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLOptGroupElement : IHTMLElement
+    internal interface IHTMLOptGroupElement : IHTMLElement
     {
         /**
          * The control is unavailable in this context. See the disabled attribute 

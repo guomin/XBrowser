@@ -3,7 +3,7 @@ using XBrowserProject.HtmlDom;
 
 namespace XBrowserProject.BrowserModel.Internal
 {
-    public class History : IHTMLHistory
+    internal class History : IHTMLHistory
     {
         #region IHTMLHistory Members
 

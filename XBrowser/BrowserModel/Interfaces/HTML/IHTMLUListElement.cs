@@ -5,7 +5,7 @@ namespace XBrowserProject.HtmlDom
      * Unordered list. See the UL element definition in Html 4.01.
      * <p>See also the <a href='http://www.w3.org/TR/2003/REC-DOM-Level-2-Html-20030109'>Document Object Model (DOM) Level 2 Html Specification</a>.
      */
-    public interface IHTMLUListElement : IHTMLElement
+    internal interface IHTMLUListElement : IHTMLElement
     {
         /**
          * Reduce spacing between list items. See the compact attribute definition 

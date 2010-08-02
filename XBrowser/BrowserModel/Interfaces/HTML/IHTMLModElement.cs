@@ -2,7 +2,7 @@
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLModElement : IHTMLElement
+    internal interface IHTMLModElement : IHTMLElement
     {
         string cite { get; set; }
 

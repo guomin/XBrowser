@@ -8,7 +8,7 @@ namespace XBrowserProject.HtmlDom
      * module [<a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-CSSStyle-20001113'>DOM Level 2 CSSStyle Sheets and CSS</a>]. 
      * <p>See also the <a href='http://www.w3.org/TR/2003/REC-DOM-Level-2-Html-20030109'>Document Object Model (DOM) Level 2 Html Specification</a>.
      */
-    public interface IHTMLStyleElement : IHTMLElement
+    internal interface IHTMLStyleElement : IHTMLElement
     {
         /**
          * Enables/disables the style sheet. 

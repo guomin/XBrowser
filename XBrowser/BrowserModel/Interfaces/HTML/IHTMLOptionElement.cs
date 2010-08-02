@@ -1,7 +1,7 @@
 ﻿using System;
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLOptionElement : IHTMLElement
+    internal interface IHTMLOptionElement : IHTMLElement
     {
         /**
          * Represents the value of the Html selected attribute. The value of this 

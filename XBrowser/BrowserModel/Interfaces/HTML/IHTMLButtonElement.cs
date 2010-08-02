@@ -5,7 +5,7 @@ namespace XBrowserProject.HtmlDom
      * Push button. See the BUTTON element definition in Html 4.01.
      * <p>See also the <a href='http://www.w3.org/TR/2003/REC-DOM-Level-2-Html-20030109'>Document Object Model (DOM) Level 2 Html Specification</a>.
      */
-    public interface IHTMLButtonElement : IHTMLElement
+    internal interface IHTMLButtonElement : IHTMLElement
     {
         /**
          * A single character access key to give access to the form control. See 

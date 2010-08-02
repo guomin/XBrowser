@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface ICDATASection : IText
+    internal interface ICDATASection : IText
     {
     }
 }

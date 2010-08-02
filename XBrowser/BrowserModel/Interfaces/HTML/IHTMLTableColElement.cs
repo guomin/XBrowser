@@ -1,7 +1,7 @@
 ﻿
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLTableColElement : IHTMLElement
+    internal interface IHTMLTableColElement : IHTMLElement
     {
 
         /**

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface ICharacterData
+    internal interface ICharacterData
     {
         /// <summary>
         /// The character data of the node that implements this interface. The DOM implementation may not put arbitrary limits on the amount of data that may be stored in a CharacterData node. However, implementation limits may mean that the entirety of a node'coreRule data may not fit into a single DOMString. In such cases, the user may call substringData to retrieve the data in appropriately sized pieces.

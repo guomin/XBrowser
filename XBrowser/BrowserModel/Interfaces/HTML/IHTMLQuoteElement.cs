@@ -1,7 +1,7 @@
 ﻿using System;
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLQuoteElement : IHTMLElement
+    internal interface IHTMLQuoteElement : IHTMLElement
     {
         /**
          * Horizontal text alignment. See the cite attribute definition in Html 

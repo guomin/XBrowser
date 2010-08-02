@@ -4,7 +4,7 @@ using XBrowserProject.HtmlDom;
 
 namespace XBrowserProject.BrowserModel.Internal.HtmlDom
 {
-    public class HtmlTextNode : XmlText, IText
+    internal class HtmlTextNode : XmlText, IText
     {
         public HtmlTextNode(string data, HtmlDocument doc)
             : base(data, doc)

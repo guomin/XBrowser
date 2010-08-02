@@ -1,6 +1,6 @@
 namespace XBrowserProject.HtmlParser.HtmlTokenizer
 {
-    public class CharacterToken : Token
+    internal class CharacterToken : Token
     {
         private char tokenData;
 

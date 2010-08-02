@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace XBrowserProject.HtmlParser.HtmlTokenizer
 {
-    public class HtmlTextReader : TextReader, IXmlLineInfo
+    internal class HtmlTextReader : TextReader, IXmlLineInfo
     {
         private TextReader internalReader;
         private bool isMarked;

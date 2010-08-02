@@ -1,7 +1,7 @@
 ﻿using System;
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLOListElement : IHTMLElement
+    internal interface IHTMLOListElement : IHTMLElement
     {
         /**
          * Reduce spacing between list items. See the compact attribute definition 

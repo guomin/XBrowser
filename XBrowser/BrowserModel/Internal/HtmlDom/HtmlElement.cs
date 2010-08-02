@@ -3,7 +3,7 @@ using XBrowserProject.HtmlDom;
 
 namespace XBrowserProject.BrowserModel.Internal.HtmlDom
 {
-	public class HtmlElement : XmlElement, IHTMLElement
+	internal class HtmlElement : XmlElement, IHTMLElement
 	{
 		private bool isFormattingScopeMarker = false;
 

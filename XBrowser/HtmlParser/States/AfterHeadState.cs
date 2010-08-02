@@ -96,7 +96,7 @@ namespace XBrowserProject.HtmlParser.States
     /// </item>
     /// </list>
     /// </remarks>
-    public class AfterHeadState : ParserState
+    internal class AfterHeadState : ParserState
     {
         public override string Description
         {

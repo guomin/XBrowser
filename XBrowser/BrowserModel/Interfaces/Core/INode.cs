@@ -28,7 +28,7 @@ namespace XBrowserProject.HtmlDom
     /// <summary>
     /// http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1950641247
     /// </summary>
-    public interface INode
+    internal interface INode
     {
         /// <summary>
         /// The name of this node, depending on its type; see the table above. 

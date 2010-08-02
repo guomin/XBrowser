@@ -78,7 +78,7 @@ namespace XBrowserProject.HtmlParser.States
     /// </item>
     /// </list>
     ///</remarks>
-    public class InTableBodyState : ParserState
+    internal class InTableBodyState : ParserState
     {
         public override string Description
         {

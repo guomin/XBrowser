@@ -2,7 +2,7 @@ using XBrowserProject.HtmlDom;
 
 namespace XBrowserProject.BrowserModel.Internal.HtmlDom
 {
-    public class HtmlScriptElement : HtmlElement, IHTMLScriptElement
+    internal class HtmlScriptElement : HtmlElement, IHTMLScriptElement
     {
         private bool alreadyStarted = false;
         private bool parserInserted = false;

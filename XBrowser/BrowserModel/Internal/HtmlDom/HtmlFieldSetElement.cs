@@ -2,7 +2,7 @@ using XBrowserProject.HtmlDom;
 
 namespace XBrowserProject.BrowserModel.Internal.HtmlDom
 {
-    public class HtmlFieldSetElement : HtmlElement, IHTMLFieldsetElement, IFormChild
+    internal class HtmlFieldSetElement : HtmlElement, IHTMLFieldsetElement, IFormChild
     {
         public HtmlFieldSetElement(string prefix, string localName, string namespaceURI, HtmlDocument doc)
             : base(prefix, localName, namespaceURI, doc)

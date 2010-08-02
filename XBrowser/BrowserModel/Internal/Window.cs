@@ -6,7 +6,7 @@ using System.IO;
 
 namespace XBrowserProject.BrowserModel.Internal
 {
-	public class Window : IHTMLWindow
+	internal class Window : IHTMLWindow
 	{
 		private string windowName = "_blank";
 		private Location windowLocation = new Location();

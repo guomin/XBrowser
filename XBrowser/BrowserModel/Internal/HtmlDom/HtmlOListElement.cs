@@ -2,7 +2,7 @@ using XBrowserProject.HtmlDom;
 
 namespace XBrowserProject.BrowserModel.Internal.HtmlDom
 {
-    public class HtmlOListElement : HtmlElement, IHTMLOListElement
+    internal class HtmlOListElement : HtmlElement, IHTMLOListElement
     {
         public HtmlOListElement(string prefix, string localName, string namespaceURI, HtmlDocument doc)
             : base(prefix, localName, namespaceURI, doc)

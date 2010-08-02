@@ -144,7 +144,7 @@ namespace XBrowserProject.HtmlParser.States
     /// </item>
     /// </list>
     /// </remarks>
-    public class InHeadState : ParserState
+    internal class InHeadState : ParserState
     {
         private string description = "in head";
         private bool isFosterParentingRequired = false;

@@ -7,7 +7,7 @@ using XBrowserProject.HtmlParser.HtmlTokenizer;
 
 namespace XBrowserProject.HtmlParser.States
 {
-    public enum QuirksMode
+    internal enum QuirksMode
     {
         None,
         LimitedQuirks,
@@ -144,7 +144,7 @@ namespace XBrowserProject.HtmlParser.States
     /// </item>
     /// </list>
     /// </remarks>
-    public class InitialState : ParserState
+    internal class InitialState : ParserState
     {
         private static List<string> quirksPublicIdentifiers;
 

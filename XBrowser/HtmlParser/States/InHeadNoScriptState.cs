@@ -66,7 +66,7 @@ namespace XBrowserProject.HtmlParser.States
     /// </item>
     /// </list>
     /// </remarks>
-    public class InHeadNoScriptState : ParserState
+    internal class InHeadNoScriptState : ParserState
     {
         public override string Description
         {

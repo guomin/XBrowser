@@ -69,7 +69,7 @@ namespace XBrowserProject.HtmlParser.States
     /// The root element can end up being removed from the Document object, e.g. by scripts; nothing in particular happens in such cases, content continues being appended to the nodes as described in the next section.
     /// </para>
     /// </remarks>
-    public class BeforeHtmlState : ParserState
+    internal class BeforeHtmlState : ParserState
     {
         public override string Description
         {

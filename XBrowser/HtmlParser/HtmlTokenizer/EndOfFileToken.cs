@@ -1,6 +1,6 @@
 namespace XBrowserProject.HtmlParser.HtmlTokenizer
 {
-    public class EndOfFileToken : Token
+    internal class EndOfFileToken : Token
     {
         public override TokenType TokenType
         {

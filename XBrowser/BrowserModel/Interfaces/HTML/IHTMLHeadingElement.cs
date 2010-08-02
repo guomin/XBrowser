@@ -1,7 +1,7 @@
 ﻿using System;
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLHeadingElement : IHTMLElement
+    internal interface IHTMLHeadingElement : IHTMLElement
     {
         /**
          * Horizontal text alignment. See the align attribute definition in Html 

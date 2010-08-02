@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IComment : ICharacterData
+    internal interface IComment : ICharacterData
     {
     }
 }

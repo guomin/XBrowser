@@ -2,7 +2,7 @@ using XBrowserProject.HtmlDom;
 
 namespace XBrowserProject.BrowserModel.Internal.HtmlDom
 {
-    public class HtmlLegendElement : HtmlElement, IHTMLLegendElement, IFormChild
+    internal class HtmlLegendElement : HtmlElement, IHTMLLegendElement, IFormChild
     {
         public HtmlLegendElement(string prefix, string localName, string namespaceURI, HtmlDocument doc)
             : base(prefix, localName, namespaceURI, doc)

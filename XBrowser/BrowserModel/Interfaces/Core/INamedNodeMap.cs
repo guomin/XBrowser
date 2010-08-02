@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface INamedNodeMap
+    internal interface INamedNodeMap
     {
         /// <summary>
         /// The number of nodes in the map. The range of valid child node indices is 0 to length-1 inclusive.

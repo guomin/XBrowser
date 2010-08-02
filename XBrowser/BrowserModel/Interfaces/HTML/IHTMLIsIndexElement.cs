@@ -1,7 +1,7 @@
 ﻿using System;
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLIsIndexElement : IHTMLElement
+    internal interface IHTMLIsIndexElement : IHTMLElement
     {
         IHTMLFormElement form { get; }
         string prompt { get; set; }

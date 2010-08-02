@@ -3,7 +3,7 @@ using XBrowserProject.HtmlDom;
 
 namespace XBrowserProject.BrowserModel.Internal
 {
-    public class Location : IHTMLLocation
+    internal class Location : IHTMLLocation
     {
         Uri internalLocation;
 

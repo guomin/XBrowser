@@ -1,6 +1,6 @@
 namespace XBrowserProject.BrowserModel.Internal.HtmlDom
 {
-    public class HtmlFrameSetElement : HtmlElement
+    internal class HtmlFrameSetElement : HtmlElement
     {
         public HtmlFrameSetElement(string prefix, string localName, string namespaceURI, HtmlDocument doc)
             : base(prefix, localName, namespaceURI, doc)

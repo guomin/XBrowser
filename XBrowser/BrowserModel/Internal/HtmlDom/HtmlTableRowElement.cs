@@ -2,7 +2,7 @@ using XBrowserProject.HtmlDom;
 
 namespace XBrowserProject.BrowserModel.Internal.HtmlDom
 {
-    public class HtmlTableRowElement : HtmlElement, IHTMLTableRowElement
+    internal class HtmlTableRowElement : HtmlElement, IHTMLTableRowElement
     {
         public HtmlTableRowElement(string prefix, string localName, string namespaceURI, HtmlDocument doc)
             : base(prefix, localName, namespaceURI, doc)

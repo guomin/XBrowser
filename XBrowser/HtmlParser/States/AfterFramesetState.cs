@@ -60,7 +60,7 @@ namespace XBrowserProject.HtmlParser.States
     /// </item>
     /// </list>
     /// </remarks>
-    public class AfterFramesetState : ParserState
+    internal class AfterFramesetState : ParserState
     {
         public override string Description
         {

@@ -4,7 +4,7 @@ using XBrowserProject.HtmlParser.HtmlTokenizer;
 
 namespace XBrowserProject.HtmlParser.States
 {
-    public class AfterAfterFramesetState : ParserState
+    internal class AfterAfterFramesetState : ParserState
     {
         /// <summary>
         /// 

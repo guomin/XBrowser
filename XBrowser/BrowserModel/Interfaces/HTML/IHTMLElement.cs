@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLElement : IElement
+    internal interface IHTMLElement : IElement
     {
         /// <summary>
         /// The element'coreRule identifier. See the id attribute definition  in HTML 4.0.

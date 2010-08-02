@@ -52,6 +52,7 @@
     <Compile Include="QueryTests.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="SandBox.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Html\basic1.htm" />

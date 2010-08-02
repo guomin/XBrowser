@@ -2,7 +2,7 @@
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLFrameElement : IHTMLElement
+    internal interface IHTMLFrameElement : IHTMLElement
     {
         string frameBorder { get; set; }
         string longDesc { get; set; }

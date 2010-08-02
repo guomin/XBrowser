@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IProcessingInstruction : INode
+    internal interface IProcessingInstruction : INode
     {
         /// <summary>
         /// The target of this processing instruction. XML defines this as being the first token following the markup that begins the processing instruction.

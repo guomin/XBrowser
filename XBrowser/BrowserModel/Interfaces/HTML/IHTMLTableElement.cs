@@ -10,7 +10,7 @@ namespace XBrowserProject.HtmlDom
      * TFoot element. See the TABLE element definition in Html 4.01.
      * <p>See also the <a href='http://www.w3.org/TR/2003/REC-DOM-Level-2-Html-20030109'>Document Object Model (DOM) Level 2 Html Specification</a>.
      */
-    public interface IHTMLTableElement : IHTMLElement
+    internal interface IHTMLTableElement : IHTMLElement
     {
         /**
          * Specifies the table's position with respect to the rest of the 

@@ -30,7 +30,7 @@ namespace XBrowserProject.HtmlParser.States
     /// </item>
     /// </list>
     /// </remarks>
-    public class InTableTextState : ParserState
+    internal class InTableTextState : ParserState
     {
         private ParserState returnState;
         private bool isFosterParentingRequired;

@@ -7,7 +7,7 @@ namespace XBrowserProject.HtmlDom
      * element is deprecated in Html 4.01.
      * <p>See also the <a href='http://www.w3.org/TR/2003/REC-DOM-Level-2-Html-20030109'>Document Object Model (DOM) Level 2 Html Specification</a>.
      */
-    public interface IHTMLFontElement : IHTMLElement
+    internal interface IHTMLFontElement : IHTMLElement
     {
         /**
          * Font color. See the color attribute definition in Html 4.01. This 

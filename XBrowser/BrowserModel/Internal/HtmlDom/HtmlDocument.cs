@@ -4,7 +4,7 @@ using XBrowserProject.HtmlDom;
 
 namespace XBrowserProject.BrowserModel.Internal.HtmlDom
 {
-    public class HtmlDocument : XmlDocument, IHTMLDocument
+    internal class HtmlDocument : XmlDocument, IHTMLDocument
     {
         private string _title = string.Empty;
         private string _referrer = string.Empty;

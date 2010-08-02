@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLHistory
+    internal interface IHTMLHistory
     {
         int length { get; }
         void go(int delta);

@@ -1,7 +1,7 @@
 ﻿using System;
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLHtmlElement : IHTMLElement
+    internal interface IHTMLHtmlElement : IHTMLElement
     {
         /**
          * Version information about the document'coreRule DTD. See the version attribute 

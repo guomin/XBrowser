@@ -9,7 +9,7 @@ namespace XBrowserProject.HtmlParser.States
     /// <summary>
     /// Represents the insertion mode of "in body"
     /// </summary>
-    public class InBodyState : ParserState
+    internal class InBodyState : ParserState
     {
         private string description = "in body";
         private bool isInTable = false;

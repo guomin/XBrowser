@@ -2,7 +2,7 @@
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLIframeElement : IHTMLElement
+    internal interface IHTMLIframeElement : IHTMLElement
     {
         string align { get; set; }
         string height { get; set; }

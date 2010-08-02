@@ -1,6 +1,6 @@
 namespace XBrowserProject.BrowserModel.Internal.HtmlDom
 {
-    public class HtmlElementTagNames
+    internal class HtmlElementTagNames
     {
         public const string AnchorElementTagName = "a"; 
         public const string AbbrElementTagName = "abbr";

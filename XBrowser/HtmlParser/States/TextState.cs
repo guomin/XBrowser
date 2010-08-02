@@ -5,7 +5,7 @@ using XBrowserProject.HtmlParser.HtmlTokenizer;
 
 namespace XBrowserProject.HtmlParser.States
 {
-    public class TextState : ParserState
+    internal class TextState : ParserState
     {
         private ParserState returnState;
 

@@ -1,6 +1,6 @@
 ﻿namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLAreaElement : IHTMLElement
+    internal interface IHTMLAreaElement : IHTMLElement
     {
         string accessKey { get; set; }
         string alt { get; set; }

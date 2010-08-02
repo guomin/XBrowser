@@ -129,7 +129,7 @@ namespace XBrowserProject.HtmlParser.States
     /// </item>
     /// </list>
     /// </remarks>
-    public class InSelectState : ParserState
+    internal class InSelectState : ParserState
     {
         private string description = "in select";
 

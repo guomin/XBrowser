@@ -12,14 +12,14 @@ using XBrowserProject.HtmlParser.States;
 
 namespace XBrowserProject.HtmlParser
 {
-    public enum ActiveFormattingElementListState
+    internal enum ActiveFormattingElementListState
     {
         None,
         Add,
         AddAsMarker
     }
 
-    public class Parser
+    internal class Parser
     {
         public const string EmptyDocTypeName = "::EmptyDocType::";
         public const string HtmlNamespace = "http://www.w3.org/1999/xhtml";

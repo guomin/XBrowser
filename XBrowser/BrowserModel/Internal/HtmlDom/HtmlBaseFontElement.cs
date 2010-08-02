@@ -2,7 +2,7 @@ using XBrowserProject.HtmlDom;
 
 namespace XBrowserProject.BrowserModel.Internal.HtmlDom
 {
-    public class HtmlBaseFontElement : HtmlElement, IHTMLBaseFontElement
+    internal class HtmlBaseFontElement : HtmlElement, IHTMLBaseFontElement
     {
         public HtmlBaseFontElement(string prefix, string localName, string namespaceURI, HtmlDocument doc)
             : base(prefix, localName, namespaceURI, doc)

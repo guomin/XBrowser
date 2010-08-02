@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XBrowserProject.HtmlParser
 {
-    public class ParseError
+    internal class ParseError
     {
         private string errorDescription;
         private int errorPosition;

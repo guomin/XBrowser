@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IDocumentType : INode
+    internal interface IDocumentType : INode
     {
         /// <summary>
         /// The name of DTD; i.newNode., the name immediately following the DOCTYPE keyword.

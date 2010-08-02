@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLFieldsetElement : IHTMLElement
+    internal interface IHTMLFieldsetElement : IHTMLElement
     {
         IHTMLFormElement form { get; }
     }

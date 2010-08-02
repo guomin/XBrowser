@@ -3,7 +3,7 @@ using XBrowserProject.HtmlDom;
 
 namespace XBrowserProject.BrowserModel.Internal.HtmlDom
 {
-    public class HtmlCommentNode : XmlComment, IComment
+    internal class HtmlCommentNode : XmlComment, IComment
     {
         string commentData = string.Empty;
 

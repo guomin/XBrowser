@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IEntityReference : INode
+    internal interface IEntityReference : INode
     {
         // Introduced in DOM Level 2:
         string publicId { get; }

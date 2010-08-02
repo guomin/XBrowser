@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XBrowserProject.HtmlParser
 {
-    public class HtmlCharacterUtilities
+    internal class HtmlCharacterUtilities
     {
         public const char Ampersand = '&';
         public const char Semicolon = ';';

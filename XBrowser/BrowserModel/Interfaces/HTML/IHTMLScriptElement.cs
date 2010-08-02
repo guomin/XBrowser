@@ -1,6 +1,6 @@
 ﻿namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLScriptElement : IHTMLElement
+    internal interface IHTMLScriptElement : IHTMLElement
     {
         string text { get; set; }
         string htmlFor { get; set; }

@@ -7,14 +7,14 @@ using XBrowserProject.HtmlDom;
 
 namespace XBrowserProject.HtmlParser
 {
-    public enum ScopeType
+    internal enum ScopeType
     {
         Element,
         ListItem,
         Table
     }
 
-    public class ElementStack : List<HtmlElement>
+    internal class ElementStack : List<HtmlElement>
     {
         private static Dictionary<ScopeType, List<string>> scopeElementNames;
 

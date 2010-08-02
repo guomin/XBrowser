@@ -57,7 +57,7 @@ namespace XBrowserProject.HtmlParser.States
     /// </para>
     /// </list>
     /// </remarks>
-    public class AfterBodyState : ParserState
+    internal class AfterBodyState : ParserState
     {
         public override string Description
         {

@@ -7,7 +7,7 @@ using XBrowserProject.HtmlParser.HtmlTokenizer;
 
 namespace XBrowserProject.HtmlParser
 {
-    public class CharacterReference
+    internal class CharacterReference
     {
         private enum CharacterReferenceType
         {

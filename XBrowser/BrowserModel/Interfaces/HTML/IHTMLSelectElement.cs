@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLSelectElement
+    internal interface IHTMLSelectElement
     {
         string type { get; }
         int selectedIndex { get; set; }

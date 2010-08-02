@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace XBrowserProject.HtmlParser.HtmlTokenizer
 {
-    public class TagToken : Token
+    internal class TagToken : Token
     {
         private TokenType tokenTypeValue;
         private string tokenName = string.Empty;

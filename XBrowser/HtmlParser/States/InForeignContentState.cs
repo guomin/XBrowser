@@ -7,7 +7,7 @@ using XBrowserProject.HtmlParser.HtmlTokenizer;
 
 namespace XBrowserProject.HtmlParser.States
 {
-    public class InForeignContentState : ParserState
+    internal class InForeignContentState : ParserState
     {
         private static Dictionary<string, string> mathMLAttributes;
         private static Dictionary<string, string> svgAttributes;

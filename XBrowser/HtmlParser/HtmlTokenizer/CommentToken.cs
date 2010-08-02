@@ -1,6 +1,6 @@
 namespace XBrowserProject.HtmlParser.HtmlTokenizer
 {
-    public class CommentToken : Token
+    internal class CommentToken : Token
     {
         private string tokenData;
 

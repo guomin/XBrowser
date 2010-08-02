@@ -1,7 +1,7 @@
 ﻿using System;
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLLabelElement : IHTMLElement
+    internal interface IHTMLLabelElement : IHTMLElement
     {
         /**
          * A single character access key to give access to the form control. See 

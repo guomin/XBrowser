@@ -1,7 +1,7 @@
 ﻿using System;
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLLIElement
+    internal interface IHTMLLIElement
     {
         /**
          * List item bullet style. See the type attribute definition in Html 4.01. 

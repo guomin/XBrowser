@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IAttr : INode
+    internal interface IAttr : INode
     {
         /// <summary>
         /// Returns the name of this attribute.

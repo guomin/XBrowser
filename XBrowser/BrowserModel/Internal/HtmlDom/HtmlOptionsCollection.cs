@@ -4,7 +4,7 @@ using XBrowserProject.HtmlDom;
 
 namespace XBrowserProject.BrowserModel.Internal.HtmlDom
 {
-    public class HtmlOptionsCollection : IHTMLOptionsCollection
+    internal class HtmlOptionsCollection : IHTMLOptionsCollection
     {
         private List<XmlNode> _internalCollection = new List<XmlNode>();
 

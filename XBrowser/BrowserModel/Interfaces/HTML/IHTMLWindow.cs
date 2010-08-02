@@ -5,7 +5,7 @@ using XBrowserProject.BrowserModel.Internal.HtmlDom;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLWindow
+    internal interface IHTMLWindow
     {
         IHTMLWindow window { get; }
         IHTMLWindow self { get; }

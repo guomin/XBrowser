@@ -1,7 +1,7 @@
 ﻿using System;
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLHRElement : IHTMLElement
+    internal interface IHTMLHRElement : IHTMLElement
     {
         /**
          * Align the rule on the page. See the align attribute definition in Html 

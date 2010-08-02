@@ -2,7 +2,7 @@ using XBrowserProject.HtmlDom;
 
 namespace XBrowserProject.BrowserModel.Internal.HtmlDom
 {
-    public class HtmlOptionElement : HtmlElement, IHTMLOptionElement, IFormChild
+    internal class HtmlOptionElement : HtmlElement, IHTMLOptionElement, IFormChild
     {
         private HtmlFormElement _form;
         private bool _isSelected;

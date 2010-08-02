@@ -327,322 +327,322 @@
     <Compile Include="HtmlParser\HtmlTokenizer\Tokenizer.cs" />
     <Compile Include="HtmlParser\HtmlTokenizer\TokenizerState.cs" />
     <Compile Include="HtmlParser\HtmlTokenizer\TokenType.cs" />
-    <Compile Include="BrowserModel\Public\XBrowserAbbrElement.cs">
+    <Compile Include="BrowserModel\Public\XAbbrElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserAddressElement.cs">
+    <Compile Include="BrowserModel\Public\XAddressElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserAnchorElement.cs">
+    <Compile Include="BrowserModel\Public\XAnchorElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserAreaElement.cs">
+    <Compile Include="BrowserModel\Public\XAreaElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserArticleElement.cs">
+    <Compile Include="BrowserModel\Public\XArticleElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserAsideElement.cs">
+    <Compile Include="BrowserModel\Public\XAsideElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserAudioElement.cs">
+    <Compile Include="BrowserModel\Public\XAudioElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserBaseElement.cs">
+    <Compile Include="BrowserModel\Public\XBaseElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserBdoElement.cs">
+    <Compile Include="BrowserModel\Public\XBdoElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserBlockquoteElement.cs">
+    <Compile Include="BrowserModel\Public\XBlockquoteElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserBodyElement.cs">
+    <Compile Include="BrowserModel\Public\XBodyElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserBoldElement.cs">
+    <Compile Include="BrowserModel\Public\XBoldElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserBrElement.cs">
+    <Compile Include="BrowserModel\Public\XBrElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserButtonElement.cs">
+    <Compile Include="BrowserModel\Public\XButtonElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserCanvasElement.cs">
+    <Compile Include="BrowserModel\Public\XCanvasElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserCaptionElement.cs">
+    <Compile Include="BrowserModel\Public\XCaptionElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserCiteElement.cs">
+    <Compile Include="BrowserModel\Public\XCiteElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserCodeElement.cs">
+    <Compile Include="BrowserModel\Public\XCodeElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserColElement.cs">
+    <Compile Include="BrowserModel\Public\XColElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserColgroupElement.cs">
+    <Compile Include="BrowserModel\Public\XColgroupElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserCommandElement.cs">
+    <Compile Include="BrowserModel\Public\XCommandElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserDatalistElement.cs">
+    <Compile Include="BrowserModel\Public\XDatalistElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserDdElement.cs">
+    <Compile Include="BrowserModel\Public\XDdElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserDelElement.cs">
+    <Compile Include="BrowserModel\Public\XDelElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserDetailsElement.cs">
+    <Compile Include="BrowserModel\Public\XDetailsElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserDfnElement.cs">
+    <Compile Include="BrowserModel\Public\XDfnElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserDivElement.cs">
+    <Compile Include="BrowserModel\Public\XDivElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserDlElement.cs">
+    <Compile Include="BrowserModel\Public\XDlElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserDtElement.cs">
+    <Compile Include="BrowserModel\Public\XDtElement.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BrowserModel\Public\XBrowserElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserEmbedElement.cs">
+    <Compile Include="BrowserModel\Public\XEmbedElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserEmElement.cs">
+    <Compile Include="BrowserModel\Public\XEmElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserFieldsetElement.cs">
+    <Compile Include="BrowserModel\Public\XFieldsetElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserFigcaptionElement.cs">
+    <Compile Include="BrowserModel\Public\XFigcaptionElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserFigureElement.cs">
+    <Compile Include="BrowserModel\Public\XFigureElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserFooterElement.cs">
+    <Compile Include="BrowserModel\Public\XFooterElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserFormElement.cs">
+    <Compile Include="BrowserModel\Public\XFormElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserH1Element.cs">
+    <Compile Include="BrowserModel\Public\XH1Element.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserH2Element.cs">
+    <Compile Include="BrowserModel\Public\XH2Element.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserH3Element.cs">
+    <Compile Include="BrowserModel\Public\XH3Element.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserH4Element.cs">
+    <Compile Include="BrowserModel\Public\XH4Element.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserH5Element.cs">
+    <Compile Include="BrowserModel\Public\XH5Element.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserH6Element.cs">
+    <Compile Include="BrowserModel\Public\XH6Element.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserHeadElement.cs">
+    <Compile Include="BrowserModel\Public\XHeadElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserHeaderElement.cs">
+    <Compile Include="BrowserModel\Public\XHeaderElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserHgroupElement.cs">
+    <Compile Include="BrowserModel\Public\XHgroupElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserHrElement.cs">
+    <Compile Include="BrowserModel\Public\XHrElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserHtmlElement.cs">
+    <Compile Include="BrowserModel\Public\XHtmlElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserIframeElement.cs">
+    <Compile Include="BrowserModel\Public\XIframeElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserImgElement.cs">
+    <Compile Include="BrowserModel\Public\XImgElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserInputElement.cs">
+    <Compile Include="BrowserModel\Public\XInputElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserInsElement.cs">
+    <Compile Include="BrowserModel\Public\XInsElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserItalicElement.cs">
+    <Compile Include="BrowserModel\Public\XItalicElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserKbdElement.cs">
+    <Compile Include="BrowserModel\Public\XKbdElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserKeygenElement.cs">
+    <Compile Include="BrowserModel\Public\XKeygenElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserLabelElement.cs">
+    <Compile Include="BrowserModel\Public\XLabelElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserLegendElement.cs">
+    <Compile Include="BrowserModel\Public\XLegendElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserLiElement.cs">
+    <Compile Include="BrowserModel\Public\XLiElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserLinkElement.cs">
+    <Compile Include="BrowserModel\Public\XLinkElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserMapElement.cs">
+    <Compile Include="BrowserModel\Public\XMapElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserMarkElement.cs">
+    <Compile Include="BrowserModel\Public\XMarkElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserMenuElement.cs">
+    <Compile Include="BrowserModel\Public\XMenuElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserMetaElement.cs">
+    <Compile Include="BrowserModel\Public\XMetaElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserMeterElement.cs">
+    <Compile Include="BrowserModel\Public\XMeterElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserNavElement.cs">
+    <Compile Include="BrowserModel\Public\XNavElement.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BrowserModel\Public\XBrowserNode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserNoscriptElement.cs">
+    <Compile Include="BrowserModel\Public\XNoscriptElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserObjectElement.cs">
+    <Compile Include="BrowserModel\Public\XObjectElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserOlElement.cs">
+    <Compile Include="BrowserModel\Public\XOlElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserOptgroupElement.cs">
+    <Compile Include="BrowserModel\Public\XOptgroupElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserOptionElement.cs">
+    <Compile Include="BrowserModel\Public\XOptionElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserOutputElement.cs">
+    <Compile Include="BrowserModel\Public\XOutputElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserParagraphElement.cs">
+    <Compile Include="BrowserModel\Public\XParagraphElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserParamElement.cs">
+    <Compile Include="BrowserModel\Public\XParamElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserPreElement.cs">
+    <Compile Include="BrowserModel\Public\XPreElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserProgressElement.cs">
+    <Compile Include="BrowserModel\Public\XProgressElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserQuoteElement.cs">
+    <Compile Include="BrowserModel\Public\XQuoteElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserRpElement.cs">
+    <Compile Include="BrowserModel\Public\XRpElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserRtElement.cs">
+    <Compile Include="BrowserModel\Public\XRtElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserRubyElement.cs">
+    <Compile Include="BrowserModel\Public\XRubyElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserSampElement.cs">
+    <Compile Include="BrowserModel\Public\XSampElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserScriptElement.cs">
+    <Compile Include="BrowserModel\Public\XScriptElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserSectionElement.cs">
+    <Compile Include="BrowserModel\Public\XSectionElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserSelectElement.cs">
+    <Compile Include="BrowserModel\Public\XSelectElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserSmallElement.cs">
+    <Compile Include="BrowserModel\Public\XSmallElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserSourceElement.cs">
+    <Compile Include="BrowserModel\Public\XSourceElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserSpanElement.cs">
+    <Compile Include="BrowserModel\Public\XSpanElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserStrongElement.cs">
+    <Compile Include="BrowserModel\Public\XStrongElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserStyleElement.cs">
+    <Compile Include="BrowserModel\Public\XStyleElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserSubElement.cs">
+    <Compile Include="BrowserModel\Public\XSubElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserSummaryElement.cs">
+    <Compile Include="BrowserModel\Public\XSummaryElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserSupElement.cs">
+    <Compile Include="BrowserModel\Public\XSupElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserTableElement.cs">
+    <Compile Include="BrowserModel\Public\XTableElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserTbodyElement.cs">
+    <Compile Include="BrowserModel\Public\XTbodyElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserTdElement.cs">
+    <Compile Include="BrowserModel\Public\XTdElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserTextareaElement.cs">
+    <Compile Include="BrowserModel\Public\XTextareaElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserTextNode.cs">
+    <Compile Include="BrowserModel\Public\XTextNode.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserTfootElement.cs">
+    <Compile Include="BrowserModel\Public\XTfootElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserTheadElement.cs">
+    <Compile Include="BrowserModel\Public\XTheadElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserTimeElement.cs">
+    <Compile Include="BrowserModel\Public\XTimeElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserTitleElement.cs">
+    <Compile Include="BrowserModel\Public\XTitleElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserTrElement.cs">
+    <Compile Include="BrowserModel\Public\XTrElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserUlElement.cs">
+    <Compile Include="BrowserModel\Public\XUlElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserUnknownHtmlElement.cs">
+    <Compile Include="BrowserModel\Public\XUnknownHtmlElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserVarElement.cs">
+    <Compile Include="BrowserModel\Public\XVarElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrowserModel\Public\XBrowserVideoElement.cs">
+    <Compile Include="BrowserModel\Public\XVideoElement.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Query\Selectors\ChildSelector.cs" />

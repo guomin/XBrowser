@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IDocumentFragment : INode
+    internal interface IDocumentFragment : INode
     {
     }
 }

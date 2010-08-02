@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IDOMImplementation
+    internal interface IDOMImplementation
     {
         /// <summary>
         /// Test if the DOM implementation implements a specific feature.

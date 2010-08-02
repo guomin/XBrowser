@@ -2,7 +2,7 @@
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLParamElement : IHTMLElement
+    internal interface IHTMLParamElement : IHTMLElement
     {
         string name { get; set; }
         string type { get; set; }

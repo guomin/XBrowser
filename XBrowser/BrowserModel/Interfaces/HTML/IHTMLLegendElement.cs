@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLLegendElement : IHTMLElement
+    internal interface IHTMLLegendElement : IHTMLElement
     {
         IHTMLFormElement form { get; }
         string accessKey { get; set; }

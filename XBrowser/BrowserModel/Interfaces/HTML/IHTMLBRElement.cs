@@ -1,7 +1,7 @@
 ﻿using System;
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLBRElement : IHTMLElement
+    internal interface IHTMLBRElement : IHTMLElement
     {
         /**
          * Control flow of text around floats. See the clear attribute definition 

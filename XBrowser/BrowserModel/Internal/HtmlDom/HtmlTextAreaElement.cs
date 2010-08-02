@@ -2,7 +2,7 @@ using XBrowserProject.HtmlDom;
 
 namespace XBrowserProject.BrowserModel.Internal.HtmlDom
 {
-    public class HtmlTextAreaElement : HtmlElement, IHTMLTextAreaElement, IFormChild
+    internal class HtmlTextAreaElement : HtmlElement, IHTMLTextAreaElement, IFormChild
 
     {
         public HtmlTextAreaElement(string prefix, string localName, string namespaceURI, HtmlDocument doc)

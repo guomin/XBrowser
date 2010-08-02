@@ -6,7 +6,7 @@ using XBrowserProject.HtmlDom;
 
 namespace XBrowserProject.HtmlParser
 {
-    public class FormattingElementList : List<HtmlElement>
+    internal class FormattingElementList : List<HtmlElement>
     {
         public HtmlElement GetLastElement(string elementType)
         {

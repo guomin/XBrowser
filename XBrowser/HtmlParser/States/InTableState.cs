@@ -172,7 +172,7 @@ namespace XBrowserProject.HtmlParser.States
     /// </item>
     /// </list>
     /// </remarks>
-    public class InTableState : ParserState
+    internal class InTableState : ParserState
     {
         private string description = "in table";
 

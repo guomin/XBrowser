@@ -3,7 +3,7 @@ using XBrowserProject.HtmlDom;
 
 namespace XBrowserProject.BrowserModel.Internal.HtmlDom
 {
-    public class HtmlCollection : IHTMLCollection
+    internal class HtmlCollection : IHTMLCollection
     {
         private XmlNodeList _internalCollection;
 

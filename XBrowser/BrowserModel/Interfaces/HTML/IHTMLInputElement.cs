@@ -1,7 +1,7 @@
 ﻿using System;
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLInputElement : IHTMLElement
+    internal interface IHTMLInputElement : IHTMLElement
     {
 
         /**

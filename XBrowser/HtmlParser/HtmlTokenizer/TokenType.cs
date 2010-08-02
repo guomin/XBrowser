@@ -1,6 +1,6 @@
 namespace XBrowserProject.HtmlParser.HtmlTokenizer
 {
-    public enum TokenType
+    internal enum TokenType
     {
         DocType,
         Character,

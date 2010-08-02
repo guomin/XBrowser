@@ -1,7 +1,7 @@
 ﻿using System;
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLMetaElement : IHTMLElement
+    internal interface IHTMLMetaElement : IHTMLElement
     {
         /**
          * Associated information. See the content attribute definition in Html 

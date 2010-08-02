@@ -33,7 +33,7 @@ namespace XBrowserProject.HtmlParser.States
     /// </item>
     /// </list>
     /// </remarks>
-    public class InSelectInTableState : ParserState
+    internal class InSelectInTableState : ParserState
     {
         public override string Description
         {

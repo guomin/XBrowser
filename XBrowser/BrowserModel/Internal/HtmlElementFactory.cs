@@ -2,7 +2,7 @@ using XBrowserProject.BrowserModel.Internal.HtmlDom;
 
 namespace XBrowserProject.BrowserModel.Internal
 {
-    public class HtmlElementFactory
+    internal class HtmlElementFactory
     {
         #region HTML pre-4.01 element names
         public const string BgSoundElementTagName = "bgsound";

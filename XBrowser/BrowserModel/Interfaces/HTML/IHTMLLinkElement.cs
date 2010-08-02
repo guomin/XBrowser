@@ -1,7 +1,7 @@
 ﻿using System;
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLLinkElement : IHTMLElement
+    internal interface IHTMLLinkElement : IHTMLElement
     {
         /**
          * The character encoding of the resource being linked to. See the charset 

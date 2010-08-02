@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLCollection
+    internal interface IHTMLCollection
     {
         /// <summary>
         /// This attribute specifies the length or size of the list.

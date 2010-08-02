@@ -1,6 +1,6 @@
 namespace XBrowserProject.HtmlParser.HtmlTokenizer
 {
-    public enum InitialTokenizerState
+    internal enum InitialTokenizerState
     {
         Data,
         RCData,

@@ -2,7 +2,7 @@
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLFramesetElement : IHTMLElement
+    internal interface IHTMLFramesetElement : IHTMLElement
     {
         string cols { get; set; }
         string rows { get; set; }

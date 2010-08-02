@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLDocument : IDocument
+    internal interface IHTMLDocument : IDocument
     {
         IHTMLCollection this[string name] { get; }
 

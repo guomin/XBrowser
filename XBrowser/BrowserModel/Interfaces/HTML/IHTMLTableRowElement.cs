@@ -1,7 +1,7 @@
 ﻿
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLTableRowElement : IHTMLElement
+    internal interface IHTMLTableRowElement : IHTMLElement
     {
         /**
          * Horizontal alignment of data within cells of this row. See the align 

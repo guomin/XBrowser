@@ -1,7 +1,7 @@
 ﻿using System;
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLBaseFontElement : IHTMLElement
+    internal interface IHTMLBaseFontElement : IHTMLElement
     {
         string color { get; set; }
         string face { get; set; }

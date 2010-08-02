@@ -2,7 +2,7 @@
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLAppletElement : IHTMLElement
+    internal interface IHTMLAppletElement : IHTMLElement
     {
         string align { get; set; }
         string alt { get; set; }

@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IDocument : INode
+    internal interface IDocument : INode
     {
         /// <summary>
         /// The Document Type Declaration (see DocumentType) associated with this document. For HTML documents as well as XML documents without a document type declaration this returns null. The DOM Level 1 does not support editing the Document Type Declaration, therefore docType cannot be altered in any way.

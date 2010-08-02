@@ -16,16 +16,16 @@ namespace XBrowserProject
 			//XDocument = (response.ResponseText ?? "").ParseHtml();
 			
 			if(XDocument.Root == null)
-			    RootElement = new XBrowserHtmlElement(this, new XElement("html"));
+			    RootElement = new XHtmlElement(this, new XElement("html"));
 			else
 			{
 			    if(XDocument.Root.Name.LocalName.ToLower() != "html")
 			        if(window.Browser.Config.AllowNonConformingDocumentStructure)
 			            RootElement = XBrowserElement.Create(this, XDocument.Root);
 			        else
-			            RootElement = new XBrowserHtmlElement(this, new XElement("html"));
+			            RootElement = new XHtmlElement(this, new XElement("html"));
 			    else
-			        RootElement = new XBrowserHtmlElement(this, XDocument.Root);
+			        RootElement = new XHtmlElement(this, XDocument.Root);
 			}
 		}
 

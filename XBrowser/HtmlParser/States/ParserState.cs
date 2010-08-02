@@ -2,7 +2,7 @@ using XBrowserProject.HtmlParser.HtmlTokenizer;
 
 namespace XBrowserProject.HtmlParser.States
 {
-    public abstract class ParserState
+    internal abstract class ParserState
     {
         public abstract string Description { get; }
 

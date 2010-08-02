@@ -1,6 +1,6 @@
 namespace XBrowserProject.HtmlParser.HtmlTokenizer
 {
-    public class TagTokenAttribute
+    internal class TagTokenAttribute
     {
         private string attributeName = string.Empty;
         private string attributeValue = string.Empty;

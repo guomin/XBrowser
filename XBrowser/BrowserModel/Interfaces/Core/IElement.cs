@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace XBrowserProject.HtmlDom
 {
-    public interface IElement : INode
+    internal interface IElement : INode
     {
         /// <summary>
         /// The name of the element.

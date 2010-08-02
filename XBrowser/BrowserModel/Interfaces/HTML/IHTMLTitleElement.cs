@@ -1,7 +1,7 @@
 ﻿
 namespace XBrowserProject.HtmlDom
 {
-    public interface IHTMLTitleElement : IHTMLElement
+    internal interface IHTMLTitleElement : IHTMLElement
     {
         /**
          * The specified title as a string. 
