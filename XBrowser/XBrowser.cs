@@ -7,7 +7,7 @@ using System.Text;
 
 namespace XBrowserProject
 {
-	public class XBrowser : IEnumerable<XBrowserWindow>
+	public class XBrowser
 	{
 		private List<XBrowserWindow> _windows = new List<XBrowserWindow>();
 
@@ -17,10 +17,12 @@ namespace XBrowserProject
 			Cookies = new XBrowserCookieStore();
 		}
 
-		public IEnumerator<XBrowserWindow> GetEnumerator() { return _windows.GetEnumerator(); }
-		IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
-
 		/// <summary>
+		/// Gets a list of the current active browser windows/tabs controlled by this browser instance
+		/// </summary>
+		public IEnumerable<XBrowserWindow> Windows { get { return _windows.AsReadOnly(); } }
+
+			/// <summary>
 		/// Gets the configuration for the current XBrowser instance
 		/// </summary>
 		public XBrowserConfiguration Config { get; private set; }
@@ -34,7 +36,7 @@ namespace XBrowserProject
 		/// Gets the version string for the current release, in the format [major-release-number].[minor-release-number].
 		/// Not intended to be read as a decimal. e.g. 1.11 would be a greater version than 1.1.
 		/// </summary>
-		public string Version { get { return "0.1"; } }
+		public const string Version = "0.1";
 
 		/// <summary>
 		/// Creates a new top-level "window" and stores it in this browser instance. To remove it from the browser, call Close() on the window.

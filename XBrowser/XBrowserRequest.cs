@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Net;
 
 namespace XBrowserProject
@@ -66,7 +65,7 @@ namespace XBrowserProject
 					throw new XBrowserRequestException(this, "Too many redirects were attempted during the request for " + _uri);
 				handleRedirect = false;
 
-				HttpWebRequest req = (HttpWebRequest)WebRequest.Create(uri);
+				var req = (HttpWebRequest)WebRequest.Create(uri);
 				var cookieHeader = _cookies.GetHeader(uri);
 				if(cookieHeader != null)
 					req.Headers.Add("Cookie", cookieHeader);

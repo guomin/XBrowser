@@ -7,7 +7,7 @@ namespace XBrowserProject
 	{
 		internal XBrowserConfiguration(XBrowser browser)
 		{
-			UserAgent = string.Concat("AxeFrog.Net.XBrowser (r", browser.Version, ")");
+			UserAgent = string.Concat("XBrowser (r", XBrowser.Version, ") [http://github.com/axefrog/XBrowser]");
 			MaxRedirectsPerRequest = 10;
 			DefaultRequestTimeout = 30000;
 			AllowNonConformingDocumentStructure = true;

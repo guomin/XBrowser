@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BrowserModel\Internal\BrowsingContext.cs" />
     <Compile Include="BrowserModel\Internal\History.cs" />
     <Compile Include="BrowserModel\Internal\HtmlElementFactory.cs" />
@@ -676,9 +677,7 @@
     <Compile Include="XBrowserRequest.cs" />
     <Compile Include="XBrowserResponse.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>

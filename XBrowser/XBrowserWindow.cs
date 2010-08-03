@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Net;
-using System.Threading;
 
 namespace XBrowserProject
 {
@@ -23,32 +21,12 @@ namespace XBrowserProject
 		}
 
 		/// <summary>
-		/// Starts the window navigating to the specified url. This is a non-blocking operation. To be notified of completion, subscribe
-		/// to Navigated or NavigateException, or call WaitUntilReady().
-		/// </summary>
-		/// <param name="url">The url to navigate to</param>
-		public void Navigate(string url)
-		{
-			Navigate(url, false);
-		}
-
-		/// <summary>
-		/// Starts the window navigating to the specified url. This is a non-blocking operation. To be notified of completion, subscribe
-		/// to Navigated or NavigateException, or call WaitUntilReady().
-		/// </summary>
-		/// <param name="url">The url to navigate to</param>
-		public void Navigate(Uri url)
-		{
-			Navigate(url, false);
-		}
-
-		/// <summary>
 		/// Navigates to the specified url.
 		/// </summary>
 		/// <param name="url">The url to navigate to</param>
 		/// <param name="block">If true, returns when navigation is complete, otherwise returns immediately. To be notified of completion
 		/// for non-blocking calls, subscribe to Navigated or NavigateException, or call WaitUntilReady().</param>
-		public void Navigate(string url, bool block)
+		public void Navigate(string url, bool block = false)
 		{
 			Uri uri;
 			try
@@ -68,12 +46,12 @@ namespace XBrowserProject
 		/// <param name="url">The url to navigate to</param>
 		/// <param name="block">If true, returns when navigation is complete, otherwise returns immediately. To be notified of completion
 		/// for non-blocking calls, subscribe to Navigated or NavigateException, or call WaitUntilReady().</param>
-		public void Navigate(Uri url, bool block)
+		public void Navigate(Uri url, bool block = false)
 		{
 			IsNavigating = true;
-			new Thread(() => NavigateInternal(url)).Start();
-			if(block)
-				WaitUntilReady();
+			//new Thread(() => NavigateInternal(url)).Start();
+			//if(block)
+			//    WaitUntilReady();
 		}
 
 		/// <summary>
@@ -81,8 +59,9 @@ namespace XBrowserProject
 		/// </summary>
 		public void WaitUntilReady()
 		{
-			while(IsNavigating)
-				Thread.Sleep(25);
+			//while(IsNavigating)
+			//    Thread.Sleep(25);
+			
 		}
 
 		/// <summary>
@@ -92,9 +71,9 @@ namespace XBrowserProject
 		/// <returns>True if navigation completed or False if the method ended before navigation completed</returns>
 		public bool WaitUntilReady(int timeout)
 		{
-			var waitUntil = DateTime.Now.AddMilliseconds(timeout);
-			while(IsNavigating && DateTime.Now < waitUntil)
-				Thread.Sleep(25);
+			//var waitUntil = DateTime.Now.AddMilliseconds(timeout);
+			//while(IsNavigating && DateTime.Now < waitUntil)
+			//    Thread.Sleep(25);
 			return IsNavigating;
 		}
 
