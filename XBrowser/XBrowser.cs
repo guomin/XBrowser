@@ -9,18 +9,18 @@ namespace XBrowserProject
 {
 	public class XBrowser
 	{
-		private List<XBrowserWindow> _windows = new List<XBrowserWindow>();
+		private List<WindowContainer> _windows = new List<WindowContainer>();
 
 		public XBrowser()
 		{
 			Config = new XBrowserConfiguration(this);
-			Cookies = new XBrowserCookieStore();
+			Cookies = new CookieStore();
 		}
 
 		/// <summary>
 		/// Gets a list of the current active browser windows/tabs controlled by this browser instance
 		/// </summary>
-		public IEnumerable<XBrowserWindow> Windows { get { return _windows.AsReadOnly(); } }
+		public IEnumerable<WindowContainer> Windows { get { return _windows.AsReadOnly(); } }
 
 			/// <summary>
 		/// Gets the configuration for the current XBrowser instance
@@ -30,7 +30,7 @@ namespace XBrowserProject
 		/// <summary>
 		/// Gets the cookie cache for the browser
 		/// </summary>
-		public XBrowserCookieStore Cookies { get; private set; }
+		public CookieStore Cookies { get; private set; }
 
 		/// <summary>
 		/// Gets the version string for the current release, in the format [major-release-number].[minor-release-number].
@@ -42,9 +42,9 @@ namespace XBrowserProject
 		/// Creates a new top-level "window" and stores it in this browser instance. To remove it from the browser, call Close() on the window.
 		/// </summary>
 		/// <returns>The new XBrowserWindow instance</returns>
-		public XBrowserWindow CreateWindow()
+		public WindowContainer CreateWindow()
 		{
-			var win = new XBrowserWindow(this);
+			var win = new WindowContainer(this);
 			_windows.Add(win);
 			return win;
 		}

@@ -13,7 +13,7 @@ namespace XBrowserProject.Tests
 			public static string Basic2 { get { return "http://xbrowser.axefrog.com/htmltests/basic2.htm"; } }
 		}
 
-		XBrowserWindow GetWindow(string url)
+		WindowContainer GetWindow(string url)
 		{
 			var browser = new XBrowser();
 			var window = browser.CreateWindow();

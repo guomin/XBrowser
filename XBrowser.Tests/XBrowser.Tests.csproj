@@ -50,9 +50,6 @@
     <Compile Include="CookieStoreTests.cs" />
     <Compile Include="XBrowserDocumentTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QueryTests.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="SandBox.cs" />
     <Compile Include="XBrowserTests.cs" />
     <Compile Include="XBrowserWindowTests.cs" />

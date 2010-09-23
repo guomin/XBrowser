@@ -4,19 +4,19 @@ namespace XBrowserProject
 {
 	public class XBrowserWindowException : Exception
 	{
-		public XBrowserWindow Window { get; set; }
+		public WindowContainer Window { get; set; }
 
-		internal XBrowserWindowException(XBrowserWindow window, string message) : base(message)
+		internal XBrowserWindowException(WindowContainer window, string message) : base(message)
 		{
 			Window = window;
 		}
 
-		internal XBrowserWindowException(XBrowserWindow window, string message, Exception ex) : base(message, ex)
+		internal XBrowserWindowException(WindowContainer window, string message, Exception ex) : base(message, ex)
 		{
 			Window = window;
 		}
 
-		internal XBrowserWindowException(XBrowserWindow window, Exception ex) : base(ex.Message, ex)
+		internal XBrowserWindowException(WindowContainer window, Exception ex) : base(ex.Message, ex)
 		{
 			Window = window;
 		}

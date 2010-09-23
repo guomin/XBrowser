@@ -20,7 +20,7 @@ namespace XBrowserProject.Tests
 		public void Browser_window_collection_is_read_only()
 		{
 			var browser = new XBrowser();
-			Assert.IsInstanceOfType(browser.Windows, typeof(ReadOnlyCollection<XBrowserWindow>));
+			Assert.IsInstanceOfType(browser.Windows, typeof(ReadOnlyCollection<WindowContainer>));
 		}
 
 		[TestMethod]
