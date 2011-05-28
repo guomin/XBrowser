@@ -1,4 +1,5 @@
 **NOTE**: XBrowser is not currently under active development, though it may be at some point in the future. Instead. see [SimpleBrowser](http://github.com/axefrog/SimpleBrowser), which is a very mature and capable browser automation engine. While it doesn't support JavaScript, it provides all of the functionality required to get around odd AJAX/Form post scenarios that would normally be invoked by JavaScript operations. It also includes extensive detailed HTML logging so you can really easily debug your automation script, as well as ASPX doPostBack link "clicking" functionality.
+
 ----------
 
 XBrowser 
